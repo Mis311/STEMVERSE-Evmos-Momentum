@@ -1,0 +1,78 @@
+
+/* 
+================
+= Table of Index
+================
+-- @Root
+-- @Basic
+
+-- @Components
+---- @Header
+---- @Card
+
+---- @Footer
+
+
+-- @Pages
+---- @Cart_Page
+*/
+
+
+/* 
+=====
+@Root
+=====
+*/
+
+:root {
+  
+/*   
+  (Up to down) -- 82% overall
+  #041A28
+  #022339
+  #00121F 
+*/
+  --bg: #fff;
+  --bg-main-content: #f5f5f5;
+
+  /* Primary */
+  --primary: #5457b6;
+  --secondary: #ed6468;
+  --primary-light: #c3c4ef;
+  --secondary-light: #ffb8bb;
+  --primary-linear-gradient: linear-gradient(270deg, #6e29fb, #9e43f0);
+
+  /* Neutral */
+  --btn-color-1: #f3f4f6;
+  --btn-color-2: #e5e7eb;
+  --link: #000000ba;
+
+  --p-font: 16px;
+  --font-family: "Kumbh Sans", system-ui;
+  --font-weight-1: 400;
+  --font-weight-2: 700;
+
+  /* Priority Order */
+  --priority-1: 10;
+  --priority-2: 7;
+  --priority-3: 5;
+  --priority-4: 3;
+  --priority-5: 1;
+}
+
+
+/* 
+===========
+@Components
+===========
+*/
+
+/* 
+============
+-- @Header
+============
+*/
+
+nav > ul > a {
+  padding: 20px;
+}
