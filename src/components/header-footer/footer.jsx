@@ -1,22 +1,23 @@
+import SocialIcons from "../social-icons.jsx"
 export default function Footer(props) {
   return (
-    <div className='row space-evenly'>
+    <footer className='row space-evenly'>
 
       {/* Section-1 */}
       <div className='footer__section_1'>
-        <p>Logo</p>
+        
+        {/* Logo */}
+        <img className="logo" src="assets/logo.svg" alt="logo" />
+        
+        {/* Text */}
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.         </p>
-        <div>
-          {/* Four Logos 
-           - Discord
-           - Twitter
-           - Instagram
-           - Facebook
-          */}
 
-        </div>
+        {/* Social Icons */}
+        <SocialIcons className='footer__icons'/>
+        
       </div>
+      
 
       {/* Section-2 */}
       <div className='footer__section_2'>
@@ -47,6 +48,6 @@ export default function Footer(props) {
         <input type='text' placeholder='' />
         <input type='submit' />
       </div>
-    </div>
+    </footer>
   )
 }

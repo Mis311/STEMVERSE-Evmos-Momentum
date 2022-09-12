@@ -6,6 +6,7 @@
 -- @Flexbox
 -- @Margin
 -- @Styling
+---- @Colors
 
 -- @Components
 ---- @Header
@@ -34,8 +35,8 @@
   min-height: 100vh;
 }
 
-.container {
-  margin: 0 150px;
+.container {  
+  margin: 0 10%;
 }
 
 /* 
@@ -118,6 +119,9 @@
 @Styling
 ========
 */
+.px-5-radius {
+  border-radius: 5px;
+}
 .hidden {
   display: none;
 }
@@ -145,4 +149,16 @@
 
 .btn-bordered {
   border-radius: 5pc;
+}
+
+/* 
+=======
+@Colors
+=======
+*/
+.white-color {
+  color: white;
+}
+.primary-color {
+  color: var(--primary)
 }
