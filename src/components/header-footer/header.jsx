@@ -25,7 +25,7 @@ export default function Header(props) {
         {
           props.user
             ? ''
-            : <Button content='Connect Wallet' />
+            : <Button className='px-5-radius' content='Connect Wallet' />
         }
 
       </div>

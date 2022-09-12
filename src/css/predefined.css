@@ -119,6 +119,9 @@
 @Styling
 ========
 */
+.px-5-radius {
+  border-radius: 5px;
+}
 .hidden {
   display: none;
 }

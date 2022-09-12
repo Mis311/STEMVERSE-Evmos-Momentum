@@ -1,3 +1,4 @@
+import SocialIcons from "../social-icons.jsx"
 export default function Footer(props) {
   return (
     <footer className='row space-evenly'>
@@ -13,12 +14,8 @@ export default function Footer(props) {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.         </p>
 
         {/* Social Icons */}
-        <div className='footer__icons'>
-          <img src='assets/social-media/discord.svg' alt='Discord Logo' />
-          <img src='assets/social-media/instagram.svg' alt='Instagram Logo' />
-          <img src='assets/social-media/twitter.svg' alt='Twitter Logo' />
-          <img src='assets/social-media/facebook.svg' alt='Facebook Logo' />
-        </div>
+        <SocialIcons className='footer__icons'/>
+        
       </div>
       
 
