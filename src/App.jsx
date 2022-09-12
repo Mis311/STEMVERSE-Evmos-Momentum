@@ -8,12 +8,13 @@ import Marketplace from "./pages/support/marketplace";
 export default function App() {
   return (
     <div>
-
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="marketplace" element={<Marketplace />} />
         <Route path="help-center" element={<HelpCenter />} />
       </Routes>
+      
     </div>
   )
 }

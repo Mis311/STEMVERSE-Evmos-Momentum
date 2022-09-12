@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
-
+import Button from "../button/button"
 export default function Header(props) {
   return (
-    <div className='row space-evenly hr-center'>
-      <div>Logo</div>
-      <nav>
-        <ul className='row no-bullets'>
+    <header className="row hr-center vr-center space-between">
+
+      {/* Logo */}
+      <img className="logo" src="assets/logo.svg" alt="logo" />
+
+      {/* Content */}
+      <nav className='flex hr-center'>
+        <a href='!#' className='language-options'>En</a>
+        <ul className='no-bullets row space-evenly hr-center no-padding'>
           <a href='#about'><li>About</li></a>
           <a href='#story'><li>Story</li></a>
           <a href='#games-and-features'><li>Game & Features</li></a>
@@ -13,8 +18,19 @@ export default function Header(props) {
           <Link to='/stemverse-land'><li>Stemverse Land</li></Link>
         </ul>
       </nav>
-      <button>Connect Wallet</button>
-    </div>
+
+
+      {/* Connect */}
+      <div>
+        {
+          props.user
+            ? ''
+            : <Button content='Connect Wallet' />
+        }
+
+      </div>
+
+    </header>
   )
 }
 

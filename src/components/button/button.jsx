@@ -1,3 +1,7 @@
 export default function Button(props) {
-  return;
+  return (
+    <button className={'btn ' + (props.caps && " uppercase ") + (props.className)}>
+      {props.content}
+    </button>
+  )
 }

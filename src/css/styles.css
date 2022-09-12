@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* 
 ================
 = Table of Index
@@ -8,8 +8,8 @@
 
 -- @Components
 ---- @Header
+---- @Button
 ---- @Card
-
 ---- @Footer
 
 
@@ -32,21 +32,32 @@
   #022339
   #00121F 
 */
-  --bg: #fff;
+  
+/*   
+  (Up to down)
+  #00121F
+  #022339
+  #041A28
+*/
+
+  --bg: #022238;
   --bg-main-content: #f5f5f5;
 
   /* Primary */
-  --primary: #5457b6;
+  --primary: #3D9EDF;
   --secondary: #ed6468;
   --primary-light: #c3c4ef;
   --secondary-light: #ffb8bb;
   --primary-linear-gradient: linear-gradient(270deg, #6e29fb, #9e43f0);
 
-  /* Neutral */
+  /* Button */
   --btn-color-1: #f3f4f6;
   --btn-color-2: #e5e7eb;
-  --link: #000000ba;
 
+  /* Link */
+  --link-color: #fff;
+
+  /* Font */
   --p-font: 16px;
   --font-family: "Kumbh Sans", system-ui;
   --font-weight-1: 400;
@@ -60,19 +71,72 @@
   --priority-5: 1;
 }
 
+body {
+  margin: 0;
+  color: var(--bg-main-content);
+  background: var(--bg);
+  font-family: var(--font-family)
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
 
 /* 
-===========
-@Components
-===========
+==============
+-- @Components
+==============
 */
 
 /* 
 ============
--- @Header
+---- @Header
 ============
 */
+
+header {
+  padding: 10px 30px;
+  border-bottom: 1px solid var(--primary);
+}
+
+nav > a {
+  padding: 10px 15px;
+  margin: 10px 5px;
+  border: 3px solid var(--primary);
+  border-radius: 5px;
+}
 
 nav > ul > a {
-  padding: 20px;
+  padding: 20px;    
+}
+
+.logo {
+  width: 70px;
+}
+
+/* 
+============
+---- @Button
+============
+*/
+.btn {
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--bg-main-content);
+  border: 3px solid var(--primary);
+}
+
+/* 
+============
+---- @Footer
+============
+*/
+
+footer {  
+  background-color: #022237;
+}
+.footer__icons > img {
+  width: 30px;
+  margin: 0 10px
 }

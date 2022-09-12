@@ -12,9 +12,11 @@ import Footer from './components/header-footer/footer.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+
       <Header />
       <App />
       <Footer />
+
     </BrowserRouter>
   </React.StrictMode>
 )
