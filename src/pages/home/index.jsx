@@ -5,12 +5,12 @@ import Layout from "../../components/layouts/single-sided";
 function Title(props) {
   if (props.center) return (
     <div className='title full-width vr-center flex'>
-      <h2 className='center-text h-line'>{props.content}</h2>
+      <h2 className={'center-text h-line ' + props.className}>{props.content}</h2>
     </div>
   );
 
   return (
-    <h2 className='center-text title h-line'>{props.content}</h2>
+    <h2 className={'center-text h-line title ' + props.className}>{props.content}</h2>
   );
 
   // <div className={"title " + props.className}>
@@ -21,23 +21,25 @@ function Title(props) {
 
 function Home_Index() {
   return (
-    <div className="home__section_1 row space-between min-screen-height">
-      {/* Title 1 */}
-      <div className="home__title">
-        <h1 className='uppercase'>STEM</h1>
-        <div className="row space-between">
-          <Button caps={1} content="Connect" className="primary-color" />
-          <Button caps={1} content="Info" className="primary-color" />
+    <div className="home__section_1 min-screen-height">
+      <div className='row full-width space-between'>
+        {/* Title 1 */}
+        <div className="home__title">
+          <h1 className='uppercase'>STEM</h1>
+          <div className="row">
+            <Button caps={1} content="Connect" className="primary-color" />
+            <Button caps={1} content="Info" className="primary-color" />
+          </div>
         </div>
-      </div>
 
-      {/* Title 2 */}
-      <div className='home__title' >
-        <h2 className='primary-color uppercase h-line'>Verse</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt
-        </p>
+        {/* Title 2 */}
+        <div className='home__title' >
+          <Title content='Verse' className='uppercase primary-color no-margin' />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt
+          </p>
+        </div>
       </div>
     </div>
   );
