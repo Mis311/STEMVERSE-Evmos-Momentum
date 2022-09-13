@@ -254,6 +254,8 @@ footer li {
 .home__card {
   border: 3px solid var(--primary);
   padding: 20px;
+  overflow-y: scroll;
+  height: 80vh;
 }
 
 /* Section 3 (Story) */
