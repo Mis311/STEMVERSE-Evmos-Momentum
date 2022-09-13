@@ -123,6 +123,7 @@ nav > ul > a {
   left: 100px;
   border-right: 1px solid var(--primary);
   height: 100vh;
+  z-index: -1;
 }
 
 .sidebar > div {
@@ -147,6 +148,18 @@ nav > ul > a {
   color: var(--bg-main-content);
   border: 3px solid var(--primary);
   cursor: pointer;
+}
+
+/* 
+==========
+---- @Card
+==========
+*/
+
+.card__style_1 {
+  background: blue;
+  height: 100px;
+  width: 100px;
 }
 
 /* 
@@ -176,6 +189,7 @@ footer li {
 
 .single_sided_spacing {
   margin-left: 100px;
+  z-index: -2;
 }
 
 /* 
@@ -183,9 +197,16 @@ footer li {
 ---- @Home
 ==========
 */
-.home__section_1 {
-  min-height: 82.5vh;
+
+.home__section_1,
+.home__section_2,
+.home__section_3,
+.home__section_4,
+.home__section_5 {
+  padding-left: 60px;
 }
+
+/* Section 1 */
 .home__section_1 {
   background: linear-gradient(
       rgba(0, 18, 31, 0.82),
@@ -195,20 +216,21 @@ footer li {
     url(/public/assets/backgrounds/home.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-left: 60px;
 }
 .home__section_1 > div:last-child {
   margin-right: 150px;
 }
 .home__section_1 > div:last-child > p {
-  /* width: 45%; */
   width: 300px;
   line-height: 2;
 }
 
-.home__title {
+.home__title > h1 {
   font-size: 80px;
   letter-spacing: 15px;
+}
+.home__title > h1 {
+  margin: 0;
 }
 
 hr {
@@ -219,29 +241,17 @@ hr {
 
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 4px solid #fff;
 }
 
+/* Create a square */
 hr:after {
   content: "";
-  position: absolute;
-  left: 0;
-  top: -8px;
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid rgba(0, 0, 0, 0.1);
-}
-
-hr:before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -8px;
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid rgba(255, 255, 255, 0.3);
+  display: block;
+  margin: 0 auto;
+  margin-top: -0.5em;
+  width: 1em;
+  height: 1em;
+  background: #fff;
+  border-radius: 50%;
 }
