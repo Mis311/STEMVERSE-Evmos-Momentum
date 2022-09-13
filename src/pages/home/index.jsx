@@ -4,23 +4,24 @@ import Layout from "../../components/layouts/single-sided";
 
 function Section_1() {
   return (
-    <div className="min-screen-height">
-      <div className="row space-evenly">
-        {/* Title 1 */}
-        <div>
-          <h1 className="home__title row">STEM</h1>
+    <div className="section_1 row space-between min-screen-height">
+      {/* Title 1 */}
+      <div>
+        <h1 className="home__title row ">STEM</h1>
+        <div className="row space-between">
           <Button caps={1} content="Connect" className="primary-color" />
           <Button caps={1} content="Info" className="primary-color" />
         </div>
+      </div>
 
-        {/* Title 2 */}
-        <div>
-          <h1 className="home__title">VERSE</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt
-          </p>
-        </div>
+      {/* Title 2 */}
+      <div>
+        <h1 className="home__title primary-color">VERSE</h1>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt
+        </p>
       </div>
     </div>
   );

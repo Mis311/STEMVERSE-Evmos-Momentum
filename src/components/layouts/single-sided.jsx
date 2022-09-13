@@ -7,7 +7,7 @@ export default function Layout(props) {
         <SocialIcons className="column" />
       </div>
 
-      <div className="single_sided_spacing">{props.children}</div>
+      <div className="single_sided_spacing full-width">{props.children}</div>
     </div>
   );
 }
