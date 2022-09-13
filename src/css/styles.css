@@ -105,7 +105,7 @@ nav > a.active {
 }
 
 nav > ul > a {
-  padding: 20px;
+  margin: 20px;
 }
 
 .logo {
@@ -123,7 +123,6 @@ nav > ul > a {
   left: 100px;
   border-right: 1px solid var(--primary);
   height: 100vh;
-  z-index: -1;
 }
 
 .sidebar > div {
@@ -176,7 +175,7 @@ footer li {
 */
 
 .single_sided_spacing {
-  margin-left: 160px;
+  margin-left: 100px;
 }
 
 /* 
@@ -184,11 +183,24 @@ footer li {
 ---- @Home
 ==========
 */
-
-.section_1 > div:last-child {
+.home__section_1 {
+  min-height: 82.5vh;
+}
+.home__section_1 {
+  background: linear-gradient(
+      rgba(0, 18, 31, 0.82),
+      rgb(2, 35, 57, 0.82),
+      rgba(4, 26, 40, 0.82)
+    ),
+    url(/public/assets/backgrounds/home.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 60px;
+}
+.home__section_1 > div:last-child {
   margin-right: 150px;
 }
-.section_1 > div:last-child > p {
+.home__section_1 > div:last-child > p {
   /* width: 45%; */
   width: 300px;
   line-height: 2;
@@ -199,15 +211,15 @@ footer li {
   letter-spacing: 15px;
 }
 
-/* limit hr width and add three triangles before the end of the triangle */
 hr {
-  width: 50%;
-  border: 0;
+  width: 70%;
   height: 0;
+
+  margin: 0;
+
+  border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  position: relative;
-  margin: 0 auto;
 }
 
 hr:after {

@@ -4,7 +4,7 @@ import Layout from "../../components/layouts/single-sided";
 
 function Section_1() {
   return (
-    <div className="section_1 row space-between min-screen-height">
+    <div className="home__section_1 row space-between">
       {/* Title 1 */}
       <div>
         <h1 className="home__title row ">STEM</h1>
