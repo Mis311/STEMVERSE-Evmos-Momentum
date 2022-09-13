@@ -70,6 +70,15 @@ a {
   cursor: pointer;
 }
 
+.title {
+  font-family: var(--font-family-2);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 4vw;
+  text-transform: uppercase;
+  letter-spacing: 0.6vw;
+}
+
 /* 
 ==============
 -- @Components
@@ -250,12 +259,45 @@ footer li {
   width: fit-content;
 }
 
+/* Section 2 (About) */
+
 /* Card */
 .home__card {
   border: 3px solid var(--primary);
   padding: 20px;
+  height: 60vh;
+}
+
+.home__card > div {
   overflow-y: scroll;
-  height: 80vh;
+  padding: 5vw 8vw;
+  line-height: 2.5;  
+  height: -webkit-fill-available;
+}
+
+/* width */
+.home__card > div::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+.home__card > div::-webkit-scrollbar-track {
+  background: rgba(63, 159, 222, 0.42);
+  margin: 20px;
+  position: relative;
+  left: 20px;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.home__card > div::-webkit-scrollbar-thumb {
+  background: var(--primary); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.home__card > div::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary); 
 }
 
 /* Section 3 (Story) */
