@@ -50,14 +50,16 @@ function Home_About() {
 
       {/* Container */}
       <div className="container">
-        {/*  */}
+        {/* Container */}
         <div className='home__card'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur.
+          </p>
         </div>
       </div>
 
@@ -85,7 +87,7 @@ function Home_Story() {
           sit provident dolore nulla impedit voluptatem illo facere officiis,
           veritatis quidem earum atque ea temporibus optio molestiae nihil
           quibusdam doloribus eaque.
-          <div className='flex flex-wrap vr-center'>
+          <div className='flex flex-wrap vr-center hs3_card_container'>
             {/* Section 1 */}
             <div className='row'>
               <Card />
@@ -107,7 +109,7 @@ function Home_Story() {
 function CardContianer(props) {
   return (
     <div className='row space-between card-container'>
-      {/* Text & Description (width: 30vw;) */}
+      {/* Text & Description */}
       <div className={'column ' + props.position1 || ""}>
         <h2>{props.name || "Learn as You Earn"}</h2>
         <p>
@@ -126,12 +128,13 @@ function Home_Game_And_Features() {
   return (
     <div className="home__section_4 min-screen-height">
       <Title center={true} content='Games And Features' />
-
-      {/* Containers */}
-      <CardContianer position1='order-1' position2='order-2' />
-      <CardContianer position1='order-2' position2='order-1' />
-      <CardContianer position1='order-1' position2='order-2' />
-      <CardContianer position1='order-2' position2='order-1' />
+      <div className='column'>
+        {/* Containers */}
+        <CardContianer position1='order-1' position2='order-2' />
+        <CardContianer position1='order-2' position2='order-1' />
+        <CardContianer position1='order-1' position2='order-2' />
+        <CardContianer position1='order-2' position2='order-1' />
+      </div>
     </div>
   );
 }
@@ -151,7 +154,7 @@ function Newsletter() {
       <div className='newsletter-contents vr-center'>
 
         <h2>Newsletter</h2>
-        <p>
+        <p className="space-around">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -159,10 +162,12 @@ function Newsletter() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur.
         </p>
+        <div className="space-e">
+          <label></label>
+          <input></input>
+          <button>Subscribe</button>
 
-        <label></label>
-        <input></input>
-        <button>Subscribe</button>
+        </div>
         {/* Create an input/label + button */}
       </div>
     </div>
