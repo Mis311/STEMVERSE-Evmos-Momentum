@@ -2,20 +2,21 @@ import { Link } from "react-router-dom";
 import Button from "../../components/button/button";
 import Layout from "../../components/layouts/single-sided";
 
-function Title(props) {
-  return (
-    <div className={"title " + props.className}>
-      <h1>{props.content || "Stemverse Land"}</h1>
-      <hr />
-    </div>
-  );
-}
+// function Title(props) {
+//   return (
+//     <div className={"title " + props.className}>
+//       <h2>{props.content || "Stemverse Land"}</h2>
+//       <hr />
+//     </div>
+//   );
+// }
+
 function Home_Index() {
   return (
     <div className="home__section_1 row space-between min-screen-height">
       {/* Title 1 */}
       <div className="home__title">
-        <h1>STEM</h1>
+        <h1 className='uppercase'>STEM</h1>
         <div className="row space-between">
           <Button caps={1} content="Connect" className="primary-color" />
           <Button caps={1} content="Info" className="primary-color" />
@@ -24,7 +25,7 @@ function Home_Index() {
 
       {/* Title 2 */}
       <div>
-        <Title content="Verse" className="home__title primary-color" />
+        <h2 className='home__title primary-color uppercase h-line'>Verse</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt
@@ -37,8 +38,7 @@ function Home_Index() {
 function Home_About() {
   return (
     <div className="home__section_2 min-screen-height">
-      <h2>About</h2>
-      <hr />
+      <Title content="About" className='center-text' />
       {/* Container */}
       <div className="container">
         {/*  */}
