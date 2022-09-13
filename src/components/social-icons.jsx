@@ -1,6 +1,6 @@
 export default function SocialIcons(props) {
   return (
-    <div className={props.className}>
+    <div className={props.className + " social__icons"}>
       <a href="#">
         <img src="assets/social-media/discord.svg" alt="Discord Logo" />
       </a>

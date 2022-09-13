@@ -35,8 +35,9 @@
   min-height: 100vh;
 }
 
-.container {  
-  margin: 0 10%;
+.container {
+  margin: 0 160px;
+  /* margin: 0 10%; */
 }
 
 /* 
@@ -160,5 +161,5 @@
   color: white;
 }
 .primary-color {
-  color: var(--primary)
+  color: var(--primary);
 }

@@ -93,8 +93,16 @@ a {
 */
 
 header {
-  padding: 10px 30px;
+  padding: 10px 15px;
   border-bottom: 1px solid var(--primary);
+}
+
+header > div:first-child > nav {
+  margin-left: 60px;
+}
+
+header > div:last-child {
+  margin-right: 80px;
 }
 
 nav > a {
@@ -102,6 +110,10 @@ nav > a {
   margin: 10px 20px;
   border: 3px solid var(--primary);
   border-radius: 5px;
+}
+
+nav > a.active {
+  font-weight: var(--font-weight-2);
 }
 
 nav > ul > a {
@@ -112,6 +124,31 @@ nav > ul > a {
   width: 70px;
 }
 
+/* 
+============
+---- @Layout
+============
+*/
+.sidebar {
+  position: fixed;
+  bottom: 0;
+  left: 100px;
+  border-right: 1px solid var(--primary);
+  height: 100vh;
+  z-index: -1;
+}
+
+.sidebar > div {
+  position: fixed;
+  bottom: 60px;
+  left: 30px;
+}
+
+.social__icons > a > img {
+  width: 30px;
+  margin: 10px 0;
+  filter: invert(1);
+}
 /* 
 ============
 ---- @Button
@@ -131,9 +168,14 @@ nav > ul > a {
 */
 
 footer {
-  background-color: #022237;
+  background-color: #003456;
+  padding: 80px 0;
 }
+
+footer li {
+  margin-bottom: 20px;
+}
+
 .footer__icons > a > img {
-  width: 30px;
   margin: 0 10px;
 }
