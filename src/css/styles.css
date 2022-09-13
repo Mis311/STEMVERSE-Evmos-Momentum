@@ -158,10 +158,15 @@ nav > ul > a {
 ==========
 */
 
+.card-container > div:first-child {
+  width: 30vw;
+}
+
 .card__style_1 {
-  background: blue;
-  height: 100px;
-  width: 100px;
+  border: 1px solid blue;
+  height: 15vw;
+  width: 20vw;
+  margin: 25px;
 }
 
 /* 
@@ -258,10 +263,36 @@ hr {
 /*   left: 215px; 
 } */
 
-h-line{
-  
+.h-line{
+  border-bottom: 4px solid #fff;
+  width: fit-content;
 }
+
+.home__card{
+    border: 3px solid var(--primary);
+    padding: 20px;
+}
+
 
 .title{
     width: min-content;
+}
+
+
+.newsletter__background{ 
+  border: solid;
+  border-color: var(--primary); 
+  position: relative;
+  z-index:-1;
+}
+
+.newsletter-contents{
+  width:50vw;
+  border: solid;
+  border-color: var(--primary);
+  color: white; 
+  position: relative;
+  left:20vw;
+  z-index:10;
+ 
 }
