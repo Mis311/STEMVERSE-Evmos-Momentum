@@ -158,8 +158,14 @@
 =======
 */
 .white-color {
-  color: white;
+  color: white !important;
 }
 .primary-color {
-  color: var(--primary);
+  color: var(--primary) !important;
+}
+.linear-bg-0 {
+  background: var(--bg);
+}
+.linear-bg-180 {
+  background: var(--bg-2);
 }

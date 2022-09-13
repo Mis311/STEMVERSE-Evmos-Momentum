@@ -13,7 +13,7 @@
 ---- @Footer
 
 -- @Pages
----- @Cart_Page
+---- @Home
 */
 
 /* 
@@ -23,21 +23,8 @@
 */
 
 :root {
-  /*   
-  (Up to down) -- 82% overall
-  #041A28
-  #022339
-  #00121F 
-*/
-
-  /*   
-  (Up to down)
-  #00121F
-  #022339
-  #041A28
-*/
-
-  --bg: #022238;
+  --bg: linear-gradient(0deg, #00121f 0%, #022339 50%, #041a28 100%);
+  --bg-2: linear-gradient(180deg, #00121f 0%, #022339 50%, #041a28 100%);
   --bg-main-content: #f5f5f5;
 
   /* Primary */
@@ -78,6 +65,7 @@ body {
 a {
   color: var(--link-color);
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* 
@@ -159,6 +147,7 @@ nav > ul > a {
   background: transparent;
   color: var(--bg-main-content);
   border: 3px solid var(--primary);
+  cursor: pointer;
 }
 
 /* 
@@ -168,7 +157,7 @@ nav > ul > a {
 */
 
 footer {
-  background-color: #003456;
+  background-color: #022237;
   padding: 80px 0;
 }
 
@@ -178,4 +167,25 @@ footer li {
 
 .footer__icons > a > img {
   margin: 0 10px;
+}
+
+/* 
+===========
+---- @Pages
+===========
+*/
+
+.single_sided_spacing {
+  margin-left: 160px;
+}
+
+/* 
+==========
+---- @Home
+==========
+*/
+
+.home__title {
+  font-size: 100px;
+  letter-spacing: 15px;
 }
