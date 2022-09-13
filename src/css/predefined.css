@@ -7,6 +7,7 @@
 -- @Margin
 -- @Styling
 ---- @Colors
+---- @Orders
 
 -- @Components
 ---- @Header
@@ -167,4 +168,25 @@
 }
 .linear-bg-180 {
   background: var(--bg-2);
+}
+
+/* 
+=======
+@Orders
+=======
+*/
+.order-1 {
+  order: 1; 
+}
+.order-2 {
+  order: 2; 
+}
+.order-3 {
+  order: 3; 
+}
+.order-4 {
+  order: 4; 
+}
+.order-5 {
+  order: 5; 
 }
