@@ -291,7 +291,9 @@ footer li {
  
 /* Handle */
 .home__card > div::-webkit-scrollbar-thumb {
-  background: var(--primary); 
+  background-color: var(--primary); ;
+  border: 5px solid transparent;
+  background-clip: content-box;
   border-radius: 10px;
 }
 
