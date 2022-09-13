@@ -1,18 +1,13 @@
-import Line from '../abstract/line'
+import Line from "../abstract/line";
+import SocialIcons from "../social-icons";
 export default function Layout(props) {
   return (
-    <div>
-      
-      <div>
-        
-      </div>
-    
-      <div>
-        {props.children}
-      </div>
-      
+    <div className="row">
+      <SocialIcons className="column" />
+
+      <div>{props.children}</div>
     </div>
-  )
+  );
 }
 
 export function Logged_Layout(props) {
