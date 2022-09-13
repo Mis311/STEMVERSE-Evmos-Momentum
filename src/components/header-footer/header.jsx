@@ -5,11 +5,13 @@ export default function Header(props) {
     <header className="row hr-center vr-center space-between">
       <div className="row">
         {/* Logo */}
-        <img className="logo" src="assets/logo.svg" alt="logo" />
+        <Link to='/' className='flex hr-center vr-center'>
+          <img className="logo" src="assets/logo.svg" alt="logo" />
+        </Link>
 
         {/* Content */}
         <nav className="flex hr-center">
-          <a href="!#" className="language-options">
+          <a href="#" className="language-options">
             En
           </a>
           <ul className="no-bullets row space-evenly hr-center no-padding">

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 /* 
 ================
 = Table of Index
@@ -43,7 +44,8 @@
 
   /* Font */
   --p-font: 16px;
-  --font-family: "Kumbh Sans", system-ui;
+  --font-family: "Inter", system-ui;
+  --font-family-2: "Roboto", system-ui;
   --font-weight-1: 400;
   --font-weight-2: 700;
 
@@ -123,7 +125,7 @@ nav > ul > a {
   left: 100px;
   border-right: 1px solid var(--primary);
   height: 100vh;
-  z-index: -1;
+  z-index: var(--priority-4);
 }
 
 .sidebar > div {
@@ -189,7 +191,7 @@ footer li {
 
 .single_sided_spacing {
   margin-left: 100px;
-  z-index: -2;
+/*   z-index: var(--priority-5); */
 }
 
 /* 
@@ -225,14 +227,14 @@ footer li {
   line-height: 2;
 }
 
-.home__title > h1 {
-  font-size: 80px;
+.home__title > h1, .home__title > h2  {
+  font-size: 10vw;
   letter-spacing: 15px;
 }
 .home__title > h1 {
   margin: 0;
 }
-
+/* 
 hr {
   width: 70%;
   height: 0;
@@ -243,15 +245,23 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 4px solid #fff;
 }
-
+ */
 /* Create a square */
-hr:after {
+/* hr:after {
   content: "";
+  background: url(./assets/abstracts/triangles.svg) no-repeat;
   display: block;
-  margin: 0 auto;
-  margin-top: -0.5em;
-  width: 1em;
-  height: 1em;
-  background: #fff;
-  border-radius: 50%;
+  width: -webkit-fill-available;
+  height: 4px;
+  position: absolute;
+  background-size: contain;
+/*   left: 215px; 
+} */
+
+h-line{
+  
+}
+
+.title{
+    width: min-content;
 }
