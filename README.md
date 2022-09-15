@@ -4,8 +4,6 @@
 
 ## Getting Started
 
-**Note:** This repository currently contain security issues which are still required to be addressed due to usage of outdated dependencies that will be addressed soon as time progresses.
-
 ### Requirements
 
 Before running this project, make sure you have the following things to get started.
