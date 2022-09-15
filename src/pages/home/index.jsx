@@ -119,15 +119,31 @@ function Card(props) {
 
 function StoryCard(props) {
   return (
-    <div className={"card__style_1 " + props.className}>
-      <div className="card__image"></div>
+    <div
+      className={"card__style_1 " + props.className}
+      style={{
+        background: `url(${props.image})`,
+      }}
+    >
+      <OnStoryCard {...props} />
     </div>
   );
 }
 
-function onStoryCard(props) {
+function OnStoryCard(props) {
   return (
     <div>
+      {/* Lesser z-index and has an overlay */}
+      <div
+        className="on_story_card_bg"
+        style={{
+          background:
+            "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(" +
+            props.image +
+            ")",
+        }}
+      ></div>
+
       {/* Cross */}
       <div className="full-width row flex-end">X</div>
 
@@ -234,7 +250,6 @@ function Newsletter() {
             <button type="submit">Subscribe</button>
           </form>
         </div>
-        {/* Create an input/label + button */}
       </div>
     </div>
   );

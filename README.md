@@ -77,6 +77,8 @@ This a list of upcoming features that will be arriving soon.
 
 It uses the following dependencies to make the NFT Marketplace work:
 
+<!-- hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers -->
+
 - ethers
 - truffle
 - hardhat

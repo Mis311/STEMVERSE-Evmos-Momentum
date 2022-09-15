@@ -36,7 +36,7 @@ export default function Header(props) {
 
       {/* Connect */}
       <div>
-        {!props.user ? (
+        {props.user ? (
           <div>Hello</div>
         ) : (
           <Button className="px-5-radius" content="Connect Wallet" />
