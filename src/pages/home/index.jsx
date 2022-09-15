@@ -223,16 +223,16 @@ function Newsletter() {
           updates, and even story updates to hope over to another level 😀
         </p>
         <div className="space-e">
-          <input type="text" placeholder="Email" ref={newsletter} />
-          <button
-            onClick={() => {
-              console.log("Subscribed");
-              // console.log(newsletter.current.valueOf);
-              console.log(newsletter);
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              console.log(newsletter.current.value);
+              newsletter.current.value = "";
             }}
           >
-            Subscribe
-          </button>
+            <input type="email" placeholder="Email" ref={newsletter} />
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
         {/* Create an input/label + button */}
       </div>
