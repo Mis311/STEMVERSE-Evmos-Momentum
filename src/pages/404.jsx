@@ -1,4 +1,4 @@
-export default () => {
+export default function Error404() {
   return (
     <div className="error">
       <div>
@@ -17,4 +17,4 @@ export default () => {
       <button className="btn-2"></button>
     </div>
   );
-};
+}

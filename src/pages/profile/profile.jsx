@@ -1,8 +1,7 @@
-// Profile
-export default (props) => {
+export default function Profile(props) {
   return (
     <div>
-      <h1></h1>
+      <h1>Hello World</h1>
       <div className="user-profile">
         <div className="user-profile-img"></div>
         <div className="user-profile-container">
@@ -29,4 +28,4 @@ export default (props) => {
       </div>
     </div>
   );
-};
+}
