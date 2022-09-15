@@ -242,7 +242,7 @@ function Newsletter() {
 
 export default function Home(props) {
   return (
-    <Layout>
+    <Layout user={props.user}>
       <Home_Index />
       <Home_About />
       <Home_Story />

@@ -5,7 +5,7 @@ export default function Header(props) {
     <header className="row hr-center vr-center space-between">
       <div className="row">
         {/* Logo */}
-        <Link to='/' className='flex hr-center vr-center'>
+        <Link to="/" className="flex hr-center vr-center">
           <img className="logo" src="assets/logo.svg" alt="logo" />
         </Link>
 
@@ -36,8 +36,8 @@ export default function Header(props) {
 
       {/* Connect */}
       <div>
-        {props.user ? (
-          ""
+        {!props.user ? (
+          <div>Hello</div>
         ) : (
           <Button className="px-5-radius" content="Connect Wallet" />
         )}
