@@ -1,5 +1,8 @@
 import "./css/predefined.css";
 import "./css/styles.css";
+import "./css/styles-query.css";
+import "./css/predefined-query.css";
+
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home/index";
 import HelpCenter from "./pages/support/help-center";
@@ -67,7 +70,7 @@ export default function App() {
       <Routes>
         {/* Needs */}
         <Route path="/" element={<Home />} />
-        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/stemverse-land" element={<Marketplace />} />
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/ghost-nft-slot" element={<GhostNFTSlot />} />
 

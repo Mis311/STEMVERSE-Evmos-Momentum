@@ -1,12 +1,12 @@
-/* PC */
+/* desktop */
 @media (min-width: 1000px) {
   .no-mobile {
     display: block;
   }
-  .no-pc {
+  .no-desktop {
     display: none;
   }
-  .pc-flex {
+  .desktop-flex {
     display: flex;
   }
 }
@@ -16,7 +16,7 @@
   .no-mobile {
     display: block;
   }
-  .no-pc {
+  .no-desktop {
     display: block;
   }
   .no-tablet {
@@ -39,7 +39,7 @@
   .no-tablet {
     display: block;
   }
-  .no-pc {
+  .no-desktop {
     display: block;
   }
   .mobile-flex {
