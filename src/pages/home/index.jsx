@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../../components/button/button";
 import Layout from "../../components/layouts/single-sided";
+import { useRef } from "react";
 
 function Title(props) {
   if (props.center)
@@ -208,29 +209,30 @@ function Home_Game_And_Features() {
 }
 
 function Newsletter() {
+  let newsletter = useRef(null);
   return (
     <div className="home__section_5 min-screen-height row hr-center">
       {/* Background */}
       <div className="newsletter__background min-screen-height"></div>
 
-      {/* NewsLetter (inside a card) */}
-      {/* make sure to use relative or transform: translateX( vh) value */}
-
-      {/* height == min content for this div */}
+      {/* Content */}
       <div className="newsletter-contents vr-center">
         <h2>Newsletter</h2>
-        <p className="space-around">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+        <p>
+          Join the updates squad to remain updated about new earning stratgies,
+          updates, and even story updates to hope over to another level 😀
         </p>
         <div className="space-e">
-          <label></label>
-          <input></input>
-          <button>Subscribe</button>
+          <input type="text" placeholder="Email" ref={newsletter} />
+          <button
+            onClick={() => {
+              console.log("Subscribed");
+              // console.log(newsletter.current.valueOf);
+              console.log(newsletter);
+            }}
+          >
+            Subscribe
+          </button>
         </div>
         {/* Create an input/label + button */}
       </div>
