@@ -8,14 +8,12 @@
 
 Before running this project, make sure you have the following things to get started.
 
-- A Computer
+- A System
 - An Internet Connection
 - [IDE](https://www.google.com/search?q=IDE+Examples&ei=YRVaYp65ObyM9u8P4tOpyAI&ved=0ahUKEwje7ZaGsZf3AhU8hv0HHeJpCikQ4dUDCA4&uact=5&oq=IDE+Examples&gs_lcp=Cgdnd3Mtd2l6EAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAELADEEMyBwgAELADEENKBAhBGABKBAhGGABQfFh8YKYDaAFwAXgAgAEAiAEAkgEAmAEAoAEByAEKwAEB&sclient=gws-wiz) for Editing the Code
 - [Node JS](https://nodejs.org/en/download/)
 - [Git](https://git-scm.com/downloads) (Optional)
-- [Ganache](https://trufflesuite.com/ganache/)
 - [Meta Mask](https://metamask.io/download/)
-- [Truffle](https://trufflesuite.com/docs/truffle/getting-started/installation/) (Global Installation)
 
 ### Git Clone
 
@@ -38,16 +36,32 @@ cd ./STEMVERSE-Evmos-Momentum/
 Now you need to install the depedenecies for the project using the terminal.
 
 ```bash
+# Step 1
 npm install
-# or
+
+# Step 2
+cd smart_contracts
+npm install
+
+########
+## or ##
+########
+
+# Step 1
 yarn
+
+# Step 2
+cd smart_contracts
+yarn
+
+
 ```
 
 ## Configuration
 
 ### Ganache Lookup
 
-### Truffle Configuration
+### Metamask Configuration
 
 ### Running Development Server
 
@@ -77,6 +91,38 @@ This a list of upcoming features that will be arriving soon.
 
 It uses the following dependencies to make the NFT Marketplace work:
 
+- chai@^4.2.0
+- ethers@^5.4.7
+- hardhat@^2.11.1
+- @nomiclabs (Below Only)
+- - @nomiclabs/hardhat-waffle
+- - @nomiclabs/hardhat-ethers
+- web3
+- @metamask/detect-provider
+- react
+- ethereum-waffle
+- web3modal
+- @openzeppelin/contracts
+- ipfs-http-client
+- axios
+
+### More Dependencies
+
+- @nomicfoundation (Below Only)
+- - @nomicfoundation/hardhat-toolbox@^2.0.0
+- - @nomicfoundation/hardhat-network-helpers@^1.0.0
+- - @nomicfoundation/hardhat-chai-matchers@^1.0.0
+- - @nomiclabs/hardhat-ethers@^2.0.0
+- - @nomiclabs/hardhat-etherscan@^3.0.0
+
+- hardhat-gas-reporter@^1.0.8
+- solidity-coverage@^0.8.0
+- @typechain/hardhat@^6.1.2
+- typechain@^8.1.0
+- @typechain/ethers-v5@^10.1.0
+- @ethersproject/abi@^5.4.7
+- @ethersproject/providers@^5.4.7
+
 <!--
 hardhat
 @nomiclabs/hardhat-waffle
@@ -101,18 +147,3 @@ typechain@^8.1.0
 @ethersproject/abi@^5.4.7
 @ethersproject/providers@^5.4.7
 -->
-
-- ethers
-- truffle
-- hardhat
-- - @nomiclabs/hardhat-waffle
-- - @nomiclabs/hardhat-ethers
-- web3
-- @metamask/detect-provider
-- react
-- ethereum-waffle
-- chai
-- web3modal
-- @openzeppelin/contracts
-- ipfs-http-client
-- axios
