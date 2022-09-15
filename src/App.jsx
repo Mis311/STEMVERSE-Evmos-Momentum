@@ -74,7 +74,7 @@ export default function App() {
         {/* User Related */}
         <Route
           path="/profile"
-          element={<Profile {...userData} {...friendsData} />}
+          element={<Profile userData={userData} friendsData={friendsData} />}
         />
         <Route path="/settings" element={<Settings />} />
 
