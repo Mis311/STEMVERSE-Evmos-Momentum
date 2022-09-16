@@ -61,6 +61,19 @@ let userData = {
     },
   ];
 
+import {
+  isWallectConnected,
+  checkIfTransactionExist,
+  connectWallet,
+} from "./shared/Transaction";
+import { useGlobalState } from "./store";
+
+const [connectedAccount] = useGlobalState("connectedAccount");
+useEffect(() => {
+  isWallectConnected();
+  checkIfTransactionExist();
+}, []);
+
 // Application
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

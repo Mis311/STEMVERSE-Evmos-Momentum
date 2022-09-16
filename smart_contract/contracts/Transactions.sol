@@ -1,38 +1,61 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// contract name is conventionally the same as file name
 contract Transactions {
-    //transactionCounter holds the number of our transactions
-    uint256 transactionCounter;
-    // we  will call the event later on
-    event Transfer(address from, address receiver, uint amount, string message, uint256 timestamp, string keyword);
+    address private owner;
+    uint256 transactionCounts;
+    mapping (address => uint) balanceOf;
 
-    // struct will hold all above object properties
-    struct TransferStructure {
+    event Transfer(address indexed sender, address indexed receiver, uint256 amount, string remark, uint256 timestamp);
+
+    struct TransferStruct {
         address sender;
         address receiver;
-        uint amount;
-        string message;
+        uint256 amount;
+        string remark;
         uint256 timestamp;
-        string keyword;
+    }
+    
+    TransferStruct[] transactions;
+
+    constructor() {
+        owner = msg.sender;
+        balanceOf[tx.origin] = msg.sender.balance;
     }
 
-    // create an array to store transactions with above objects as fields
-    TransferStructure[] transactions;
-
-    function addToBlockchain(address payable receiver, uint amount, string memory message, string memory keyword) public {
-        transactionCounter += 1;
-        transactions.push(TransferStructure(msg.sender, receiver, amount, message, block.timestamp, keyword));
-
-        emit Transfer(msg.sender, receiver, amount, message, block.timestamp, keyword);
+    function getOwner() public view returns (address) {
+        return owner;
     }
 
-    function getAllTransactions() public view returns (TransferStructure[] memory) {
+    function sendMoney(address payable receiver, uint256 amount, string memory remark) public returns(bool success) {
+        if (balanceOf[owner] < amount) return false;
+        balanceOf[owner] -= amount;
+        balanceOf[receiver] += amount;
+
+        transactionCounts += 1;
+        transactions.push(
+            TransferStruct(
+                owner,
+                receiver,
+                amount,
+                remark,
+                block.timestamp
+            )
+        );
+
+        emit Transfer(msg.sender, receiver, amount, remark, block.timestamp);
+        return true;
+    }
+
+    function getBalance(address addr) public view returns(uint) {
+        return balanceOf[addr];
+    }
+
+    function getAllTransactions() public view returns(TransferStruct[] memory) {
         return transactions;
     }
 
-    function getTransactionCount() public view returns (uint256) {
-        return transactionCounter;
+    function getTransactionsCount() public view returns(uint256) {
+        return transactionCounts;
     }
 }
