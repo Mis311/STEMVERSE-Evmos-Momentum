@@ -3,7 +3,9 @@ import "./css/styles.css";
 import "./css/styles-query.css";
 import "./css/predefined-query.css";
 
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+
 import Home from "./pages/home/index";
 import HelpCenter from "./pages/support/help-center";
 import Marketplace from "./pages/support/marketplace";
@@ -11,9 +13,28 @@ import Profile from "./pages/profile/profile";
 import Settings from "./pages/profile/settings";
 import GhostNFTSlot from "./pages/support/ghostnft-slot";
 
+import {
+  isWallectConnected,
+  checkIfTransactionExist,
+  connectWallet,
+} from "./shared/Transaction";
+import { useGlobalState } from "./store";
+
+//
+import Header from "./components/header-footer/header.jsx";
+import Footer from "./components/header-footer/footer.jsx";
+
 export default function App(props) {
+  const [connectedAccount] = useGlobalState("connectedAccount");
+  useEffect(() => {
+    isWallectConnected();
+    checkIfTransactionExist();
+  }, []);
+
   return (
-    <div>
+    <BrowserRouter>
+      <Header {...props} />
+
       <Routes>
         {/* Needs */}
         <Route path="/" element={<Home {...props} />} />
@@ -28,6 +49,8 @@ export default function App(props) {
         {/* Error Rendering */}
         {/* <Route path="/404" element={<Error404 />} /> */}
       </Routes>
-    </div>
+
+      <Footer />
+    </BrowserRouter>
   );
 }

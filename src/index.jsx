@@ -1,12 +1,9 @@
 // Liberaries Import
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 
 // Custom Imports
 import App from "./App";
-import Header from "./components/header-footer/header.jsx";
-import Footer from "./components/header-footer/footer.jsx";
 
 // Generated Data
 let userData = {
@@ -61,26 +58,9 @@ let userData = {
     },
   ];
 
-import {
-  isWallectConnected,
-  checkIfTransactionExist,
-  connectWallet,
-} from "./shared/Transaction";
-import { useGlobalState } from "./store";
-
-const [connectedAccount] = useGlobalState("connectedAccount");
-useEffect(() => {
-  isWallectConnected();
-  checkIfTransactionExist();
-}, []);
-
 // Application
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Header user={userData} friends={friendsData} />
-      <App user={userData} friends={friendsData} />
-      <Footer />
-    </BrowserRouter>
+    <App user={userData} friends={friendsData} />
   </React.StrictMode>
 );
