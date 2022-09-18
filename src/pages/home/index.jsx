@@ -257,7 +257,7 @@ function Newsletter() {
 
 export default function Home(props) {
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} navigation={props.navigation}>
       <Home_Index />
       <Home_About />
       <Home_Story />

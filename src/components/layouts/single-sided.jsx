@@ -1,11 +1,12 @@
-import Line from "../abstract/line";
 import SocialIcons from "../social-icons";
 export default function Layout(props) {
   if (props.user) {
     return (
       <div className="row">
         {/* Social Icons */}
-        <div className="sidebar">
+        <div
+          className={"sidebar " + (props.navigation.sidebar && "priority--1")}
+        >
           <SocialIcons className="column" />
         </div>
 
@@ -13,7 +14,9 @@ export default function Layout(props) {
         <div className="single_sided_spacing full-width">{props.children}</div>
 
         {/* Logged In User Info */}
-        <div className="sidebar">
+        <div
+          className={"sidebar " + (props.navigation.sidebar && "priority--1")}
+        >
           <SocialIcons className="column" />
         </div>
       </div>

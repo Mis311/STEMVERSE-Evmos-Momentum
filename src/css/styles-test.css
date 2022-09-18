@@ -26,7 +26,6 @@
 :root {
   --bg: linear-gradient(0deg, #00121f 0%, #022339 50%, #041a28 100%);
   --bg-2: linear-gradient(180deg, #00121f 0%, #022339 50%, #041a28 100%);
-  --bg-3: #052032;
   --bg-main-content: #f5f5f5;
 
   /* Primary */
@@ -62,7 +61,6 @@
   --logo-size: 70px;
   --profile-size: 53px;
   --social-icons-size: 30px;
-  --navigation-width: 25vw;
 }
 
 body {
@@ -100,7 +98,9 @@ a {
 */
 
 header {
-  padding: 10px 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--primary);
+  /* padding: 10px 15px; */
 }
 
 header > div:first-child > nav {
@@ -143,15 +143,7 @@ div.signedin > header:before {
   position: fixed;
   top: 0;
   right: 0;
-  border-left: 1px solid var(--primary);
-}
-header:after {
-  left: 0;
-  content: "";
-  position: absolute;
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
-  border-bottom: 1px solid var(--primary);
+  /* border-left: 1px solid var(--primary); */
 }
 
 .header__user-profile {
@@ -164,7 +156,7 @@ header:after {
 
 .header__user-friends {
   position: absolute;
-  transform: translateY(60px);
+  transform: translateY(25vw);
 }
 
 .header__user-friends > .header__user-profile {
@@ -173,12 +165,9 @@ header:after {
   height: calc(var(--profile-size) - 10px);
   margin-right: 0;
 }
-div.active > .header__user-friends > div > div:not(div:first-child) {
-  display: initial;
-}
 
 .header__navigation_hover {
-  background: var(--bg-3);
+  background: red;
   width: 0;
   height: 100vw;
   position: fixed;
@@ -187,8 +176,8 @@ div.active > .header__user-friends > div > div:not(div:first-child) {
   transition: 0.6s ease all;
 }
 .header__navigation_hover2 {
-  background: #010304;
-  opacity: 0.72;
+  background: var(--bg);
+  opacity: 0.8;
   width: 0;
   height: 100vw;
   position: fixed;
@@ -196,119 +185,11 @@ div.active > .header__user-friends > div > div:not(div:first-child) {
   left: 0;
   transition: 0.6s ease all;
 }
-
-div.active > .header__navigation_hover {
-  width: var(--navigation-width);
-  z-index: 1;
+.header__navigation_hover.active {
+  width: 25vw;
 }
-div.active > .header__navigation_hover2 {
+.header__navigation_hover2.active {
   width: 100vw;
-}
-
-div > .header__navigation_hover > div {
-  margin-top: 20px;
-  margin-left: 30px;
-}
-
-div > .header__navigation_hover > div > div:first-child > div:nth-child(2),
-div
-  > .header__navigation_hover
-  > div
-  > div
-  > div:last-child
-  > div
-  > div:nth-child(2) {
-  margin: 20px;
-}
-
-div.active
-  > .header__navigation_hover
-  > div:first-child
-  > div:nth-child(2)
-  > span:first-child {
-  font-weight: 600;
-}
-
-div
-  > .header__navigation_hover
-  > div:first-child
-  > div:nth-child(2).online
-  > span:last-child,
-div
-  > .header__navigation_hover
-  > div:last-child
-  > div
-  > div:nth-child(2).online
-  > span:last-child {
-  font-size: 14px;
-  color: #00f900;
-  margin-top: 5px;
-}
-div
-  > div.header__navigation_hover.priority-4
-  > div.header__user-friends
-  > div
-  > div
-  > span:nth-child(2) {
-  font-size: 14px;
-  color: #00f900;
-  margin-top: 5px;
-}
-div
-  > div.header__navigation_hover.priority-4
-  > div.header__user-friends
-  > div
-  > div
-  > span:nth-child(1) {
-  font-weight: 700;
-}
-
-/* Replicant Profile
-.header__user-new-profile {
-  position: absolute;
-  transform: translate(-25px, -53px);
-  top: -100px;
-  right: 0;
-  transition: 0.5s ease all;
-  z-index: 4;
-}
-.header__user-friends.false {
-  opacity: 0;
-  right: 20px;
-}
-
-div.active > div.header__user-new-profile {
-  top: 100px;
-  opacity: 1;
-}
-
-.header__user-new-profile > div:nth-child(2) {
-  margin: 0 15px;
-} */
-
-.header__profile {
-  width: var(--profile-size);
-  background: var(--primary);
-  height: var(--profile-size);
-  border-radius: 50%;
-}
-
-/* Back Button Navigation */
-.header__back_button {
-  background: yellow;
-  width: var(--profile-size);
-  height: var(--profile-size);
-  position: absolute;
-  top: 50vh;
-  transition: 0.2s ease all;
-  border-radius: 50%;
-  right: calc(var(--navigation-width));
-  opacity: 0;
-  z-index: 1;
-}
-div.active .header__back_button {
-  opacity: 1;
-  right: calc(var(--navigation-width) + 4vw);
 }
 
 /* 
@@ -320,7 +201,7 @@ div.active .header__back_button {
   position: fixed;
   bottom: 0;
   left: 100px;
-  border-right: 1px solid var(--primary);
+  /* border-right: 1px solid var(--primary); */
   height: 100vh;
   z-index: var(--priority-4);
   transition: 1s ease all;
@@ -408,6 +289,8 @@ footer li {
 div.signedin .single_sided_spacing {
   margin: 0 100px;
   border-left: 1px solid var(--primary);
+  border-right: 1px solid var(--primary);
+  /* border-left: 1px solid var(--primary); */
 }
 
 /* 
@@ -571,15 +454,31 @@ div.signedin .single_sided_spacing {
 /* polygon(15% 0%, -35% 100.3%, 98% 95.6%, 101.4% 0, 190% 0%) */
 /* polygon(0 0%, 0 150%, 200% 95.6%, 101.4% 0, 190% 0%) */
 /* polygon(25% 0%, 10% 100%, 85% 100%, 96% 0%, 0% 0%) */
+
 /* 
-@keyframes hello {
-  0% {
-    right: -100px;
-    display: none;
-  }
-  100% {
-    right: 0;
-    display: block;
-  }
+Old Lines
+header:after is fully removed, backup below
+div.signedin > header:before
+.sidebar
+div.signedin .single_sided_spacing 
+
+other changes
+header == padding: 10px 15px;
+
+header:after {
+  left: 0;
+  content: "";
+  position: absolute;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  border-bottom: 1px solid var(--primary); 
 }
- */
+
+
+
+*/
+
+/* 
+New Lines
+
+*/

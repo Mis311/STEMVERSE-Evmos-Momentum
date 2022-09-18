@@ -1,11 +1,14 @@
+//
 import "./css/predefined.css";
 import "./css/styles.css";
 import "./css/styles-query.css";
 import "./css/predefined-query.css";
 
+//
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
+//
 import Home from "./pages/home/index";
 import HelpCenter from "./pages/support/help-center";
 import Marketplace from "./pages/support/marketplace";
@@ -25,7 +28,22 @@ import Header from "./components/header-footer/header.jsx";
 import Footer from "./components/header-footer/footer.jsx";
 
 export default function App(props) {
+  // States
   const [connectedAccount] = useGlobalState("connectedAccount");
+  const [navigation, setNavigation] = useState({
+    sidebar: true,
+    account: false,
+  });
+
+  // Functions
+  function updateNavigation(bool1, bool2) {
+    setNavigation({
+      sidebar: bool1 || false,
+      accout: bool2 || false,
+    });
+  }
+
+  // Reders
   useEffect(() => {
     isWallectConnected();
     checkIfTransactionExist();
@@ -33,24 +51,50 @@ export default function App(props) {
 
   return (
     <BrowserRouter>
-      <Header {...props} />
+      <div className={props.user && "signedin"}>
+        <Header
+          {...props}
+          connectWallet={connectWallet}
+          account={connectedAccount}
+          navigation={navigation}
+          setNavigation={updateNavigation}
+        />
 
-      <Routes>
-        {/* Needs */}
-        <Route path="/" element={<Home {...props} />} />
-        <Route path="/stemverse-land" element={<Marketplace {...props} />} />
-        <Route path="/help-center" element={<HelpCenter {...props} />} />
-        <Route path="/ghost-nft-slot" element={<GhostNFTSlot {...props} />} />
+        <Routes>
+          {/* Needs */}
+          <Route
+            path="/"
+            element={<Home {...props} navigation={navigation} />}
+          />
+          <Route
+            path="/stemverse-land"
+            element={<Marketplace {...props} navigation={navigation} />}
+          />
+          <Route
+            path="/help-center"
+            element={<HelpCenter {...props} navigation={navigation} />}
+          />
+          <Route
+            path="/ghost-nft-slot"
+            element={<GhostNFTSlot {...props} navigation={navigation} />}
+          />
 
-        {/* User Related */}
-        <Route path="/profile" element={<Profile {...props} />} />
-        <Route path="/settings" element={<Settings {...props} />} />
+          {/* User Related */}
+          <Route
+            path="/profile"
+            element={<Profile {...props} navigation={navigation} />}
+          />
+          <Route
+            path="/settings"
+            element={<Settings {...props} navigation={navigation} />}
+          />
 
-        {/* Error Rendering */}
-        {/* <Route path="/404" element={<Error404 />} /> */}
-      </Routes>
+          {/* Error Rendering */}
+          {/* <Route path="/404" element={<Error404 />} /> */}
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
