@@ -14,15 +14,25 @@ function UserCard(props) {
         ></div>
       )}
 
+      {/* Cancel Button */}
+      {props.cancel && (
+        <div
+          className="header__user_cancel"
+          onClick={() => {
+            // Removes user from database
+          }}
+        ></div>
+      )}
+
       {/* User Image */}
       <div className="header__profile"></div>
-      
+
       {/* User Info */}
       <div className={"column space-evenly " + props.status}>
         <span>{props.name || "Ley Hanamura"}</span>
         <span>{props.data || "Online"}</span>
       </div>
-      
+
       {/* If user is logged in */}
       {props.user && <div className="hr-center vr-center flex">▽</div>}
     </div>
@@ -88,14 +98,20 @@ export default function Header(props) {
                     <UserCard
                       data="0x0190fqw12r12 ... e591"
                       className="header__user"
+                      copy={true}
+                      cancel={true}
                     />
                     <UserCard
                       data="0x0190fqw12r12 ... e591"
                       className="header__user"
+                      copy={true}
+                      cancel={true}
                     />
                     <UserCard
                       data="0x0190fqw12r12 ... e591"
                       className="header__user"
+                      copy={true}
+                      cancel={true}
                     />
                   </div>
                 </div>

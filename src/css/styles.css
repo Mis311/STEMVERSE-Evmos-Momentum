@@ -6,7 +6,7 @@
 ================
 -- @Root
 -- @Basic
-
+-- @ScrollBar
 -- @Components
 ---- @Header
 ---- @Button
@@ -70,6 +70,7 @@ body {
   color: var(--bg-main-content);
   background: var(--bg);
   font-family: var(--font-family);
+  scroll-behavior: smooth;
 }
 
 a {
@@ -85,6 +86,37 @@ a {
   font-size: 3vw;
   text-transform: uppercase;
   letter-spacing: 0.6vw;
+}
+
+/* 
+=============
+-- @ScrollBar
+=============
+*/
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #045082;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #3d9edf;
+  border: 5px solid transparent;
+  background-clip: content-box;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0088e2;
+  border: 5px solid transparent;
+  background-clip: content-box;
+  border-radius: 10px;
 }
 
 /* 
@@ -238,6 +270,24 @@ div > .header__navigation_hover > div {
 }
 .header__user_copy:hover {
   background: var(--primary);
+}
+
+.header__user_cancel {
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  width: 30px;
+  position: absolute;
+  height: 30px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: 0.2s ease all;
+  left: 40px;
+}
+.header__user:hover .header__user_cancel {
+  opacity: 1;
+}
+.header__user_cancel:hover {
+  background: var(--secondary);
 }
 
 /* Spacing */
@@ -526,7 +576,10 @@ div.signedin .single_sided_spacing {
 
 /* Handle on hover */
 .home__card > div::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary);
+  background-color: #0088e2;
+  border: 5px solid transparent;
+  background-clip: content-box;
+  border-radius: 10px;
 }
 
 /* Section 3 (Story) */
