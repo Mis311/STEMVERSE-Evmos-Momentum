@@ -108,7 +108,6 @@ header > div:first-child > nav {
 }
 
 div.signedin > header > div:last-child {
-  right: 100px;
   z-index: var(--priority-4);
 }
 
@@ -124,7 +123,7 @@ nav > a.active {
 }
 
 nav > ul > a {
-  margin: 20px;
+  margin: 10px 20px;
 }
 
 .logo {
@@ -132,6 +131,8 @@ nav > ul > a {
 }
 
 /* Navigation */
+
+/* Line Right */
 div.signedin > header:before {
   content: "";
   background: var(--bg);
@@ -142,6 +143,8 @@ div.signedin > header:before {
   right: 0;
   border-left: 1px solid var(--primary);
 }
+
+/* Line Below */
 header:after {
   left: 0;
   content: "";
@@ -151,6 +154,7 @@ header:after {
   border-bottom: 1px solid var(--primary);
 }
 
+/* Sidebar not active profiles */
 .header__user-profile {
   width: var(--profile-size);
   height: var(--profile-size);
@@ -169,9 +173,6 @@ header:after {
   width: calc(var(--profile-size) - 10px);
   height: calc(var(--profile-size) - 10px);
   margin-right: 0;
-}
-div.active > .header__user-friends > div > div:not(div:first-child) {
-  display: initial;
 }
 
 /* Background */
@@ -204,15 +205,34 @@ div.active > .header__navigation_hover2 {
 }
 
 /* Container Based spacing */
+
+/* Container */
 div > .header__navigation_hover > div {
   margin-top: 20px;
   margin-left: 30px;
 }
+.header__user {
+  transition: 0.5s ease all;
+  cursor: pointer;
+}
+.header__user:hover {
+  background: rgb(0 60 100);
+  border-radius: 3px;
+  padding-left: 20px;
+}
 
 /* Spacing */
-header > div > div > div > div > div:nth-child(2),
-header > div > div > div > div > div > div:nth-child(2) {
-  margin: 20px;
+.header__loggedin_user > div:nth-child(2),
+.header__user > div:nth-child(2) {
+  margin: 10px 20px;
+}
+
+.header__user > div:nth-child(2) > span:first-child {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.header__user > div:nth-child(2) > span:last-child {
+  color: rgb(207, 207, 207);
 }
 
 div.active
@@ -245,18 +265,6 @@ header
   > .header__profile {
   width: calc(var(--profile-size) - 10px);
   height: calc(var(--profile-size) - 10px);
-}
-
-header
-  > div.active
-  > div.header__navigation_hover.priority-4
-  > div
-  > div
-  > div
-  > div
-  > div
-  > span:first-child {
-  font-weight: 500;
 }
 
 /*  */

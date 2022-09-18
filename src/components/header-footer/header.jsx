@@ -53,10 +53,7 @@ export default function Header(props) {
       </div>
 
       {/* Connect */}
-      <div
-        style={{ margin: 0 }}
-        className={props.navigation.sidebar && "active"}
-      >
+      <div className={props.navigation.sidebar && "active"}>
         {props.user ? (
           <>
             {/* Backgrounds */}
