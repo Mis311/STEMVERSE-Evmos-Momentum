@@ -62,35 +62,66 @@ export default function Header(props) {
             {/* Backgrounds */}
             <div className="header__navigation_hover priority-4">
               <div>
-                <UserCard user={true} status="online" />
-                <h3>Social</h3>
+                <UserCard
+                  user={true}
+                  status="online"
+                  className="header__loggedin_user"
+                />
+                <h3 className="uppercase">Social</h3>
                 {/* Pending */}
                 <div>
-                  <h4>Pending</h4>
+                  <h4 className="uppercase">Pending • 3</h4>
                   <div>
-                    <UserCard data="0x0190fqw12r12 ... e591" />
-                    <UserCard data="0x0190fqw12r12 ... e591" />
-                    <UserCard data="0x0190fqw12r12 ... e591" />
+                    <UserCard
+                      data="0x0190fqw12r12 ... e591"
+                      className="header__user"
+                    />
+                    <UserCard
+                      data="0x0190fqw12r12 ... e591"
+                      className="header__user"
+                    />
+                    <UserCard
+                      data="0x0190fqw12r12 ... e591"
+                      className="header__user"
+                    />
                   </div>
                 </div>
 
                 {/* Online */}
                 <div>
-                  <h4>Online</h4>
+                  <h4 className="uppercase">Online • 3</h4>
                   <div>
-                    <UserCard data="0x0190fqw12r12 ... e591" />
-                    <UserCard data="0x0190fqw12r12 ... e591" />
-                    <UserCard data="0x0190fqw12r12 ... e591" />
+                    <UserCard
+                      data="0x0190fqw12r12 ... e591"
+                      className="header__user"
+                    />
+                    <UserCard
+                      data="0x0190fqw12r12 ... e591"
+                      className="header__user"
+                    />
+                    <UserCard
+                      data="0x0190fqw12r12 ... e591"
+                      className="header__user"
+                    />
                   </div>
                 </div>
 
                 {/* Offline */}
                 <div>
-                  <h4>Offline</h4>
+                  <h4 className="uppercase">Offline • 3</h4>
                   <div>
-                    <UserCard data="0x0190fqw12r12 ... e591" />
-                    <UserCard data="0x0190fqw12r12 ... e591" />
-                    <UserCard data="0x0190fqw12r12 ... e591" />
+                    <UserCard
+                      data="0x0190fqw12r12 ... e591"
+                      className="header__user"
+                    />
+                    <UserCard
+                      data="0x0190fqw12r12 ... e591"
+                      className="header__user"
+                    />
+                    <UserCard
+                      data="0x0190fqw12r12 ... e591"
+                      className="header__user"
+                    />
                   </div>
                 </div>
               </div>

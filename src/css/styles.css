@@ -107,9 +107,6 @@ header > div:first-child > nav {
   margin-left: 60px;
 }
 
-header > div:last-child {
-  margin-right: 80px;
-}
 div.signedin > header > div:last-child {
   right: 100px;
   z-index: var(--priority-4);
@@ -132,9 +129,9 @@ nav > ul > a {
 
 .logo {
   width: var(--logo-size);
-  /* width: 7.3vw; */
 }
 
+/* Navigation */
 div.signedin > header:before {
   content: "";
   background: var(--bg);
@@ -177,6 +174,7 @@ div.active > .header__user-friends > div > div:not(div:first-child) {
   display: initial;
 }
 
+/* Background */
 .header__navigation_hover {
   background: var(--bg-3);
   width: 0;
@@ -205,19 +203,15 @@ div.active > .header__navigation_hover2 {
   width: 100vw;
 }
 
+/* Container Based spacing */
 div > .header__navigation_hover > div {
   margin-top: 20px;
   margin-left: 30px;
 }
 
-div > .header__navigation_hover > div > div:first-child > div:nth-child(2),
-div
-  > .header__navigation_hover
-  > div
-  > div
-  > div:last-child
-  > div
-  > div:nth-child(2) {
+/* Spacing */
+header > div > div > div > div > div:nth-child(2),
+header > div > div > div > div > div > div:nth-child(2) {
   margin: 20px;
 }
 
@@ -228,6 +222,44 @@ div.active
   > span:first-child {
   font-weight: 600;
 }
+
+/* Profile insides */
+header > div.active > div.header__navigation_hover.priority-4 > div > h3 {
+  letter-spacing: 3px;
+}
+
+header > div.active > div.header__navigation_hover.priority-4 > div > div > h4 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+/* Friends Profiles (hover) */
+header
+  > div.active
+  > div.header__navigation_hover.priority-4
+  > div
+  > div
+  > div
+  > div
+  > .header__profile {
+  width: calc(var(--profile-size) - 10px);
+  height: calc(var(--profile-size) - 10px);
+}
+
+header
+  > div.active
+  > div.header__navigation_hover.priority-4
+  > div
+  > div
+  > div
+  > div
+  > div
+  > span:first-child {
+  font-weight: 500;
+}
+
+/*  */
 
 div
   > .header__navigation_hover
@@ -571,6 +603,7 @@ div.signedin .single_sided_spacing {
 /* polygon(15% 0%, -35% 100.3%, 98% 95.6%, 101.4% 0, 190% 0%) */
 /* polygon(0 0%, 0 150%, 200% 95.6%, 101.4% 0, 190% 0%) */
 /* polygon(25% 0%, 10% 100%, 85% 100%, 96% 0%, 0% 0%) */
+/* polygon(15% 0%, -35% 110.3%, 808% -54.4%, 151.4% 0%, 0% 0%)*/
 /* 
 @keyframes hello {
   0% {
