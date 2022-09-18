@@ -14,7 +14,7 @@ import HelpCenter from "./pages/support/help-center";
 import Marketplace from "./pages/support/marketplace";
 import Profile from "./pages/profile/profile";
 import Settings from "./pages/profile/settings";
-import GhostNFTSlot from "./pages/support/ghostnft-slot";
+import GhostNFTSlot from "./pages/support/ghost-nft-slot";
 import Error404 from "./pages/404";
 
 import {

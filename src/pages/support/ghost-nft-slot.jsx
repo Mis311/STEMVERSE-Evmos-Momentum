@@ -1,3 +1,3 @@
 export default function GhostNFTSlot(props) {
-  return <>{console.log(props)}</>;
+  return <div className="column "></div>;
 }
