@@ -330,11 +330,11 @@ div > .header__navigation_hover > div {
   width: calc(var(--profile-size) - 10px);
   height: calc(var(--profile-size) - 10px);
 }
-.header__user > div:nth-child(2) > span:first-child {
+.header__user > div:nth-child(3) > span:first-child {
   font-weight: 500;
   margin-bottom: 5px;
 }
-.header__user > div:nth-child(2) > span:last-child {
+.header__user > div:nth-child(3) > span:last-child {
   color: rgb(207, 207, 207);
 }
 
@@ -354,6 +354,33 @@ div > .header__navigation_hover > div {
 div.active .header__back_button {
   opacity: 1;
   right: calc(var(--navigation-width) + 4vw);
+}
+
+/* Add Friends */
+.header__add_friends {
+  color: var(--primary);
+  cursor: pointer;
+  margin-top: 20px;
+}
+.header__add_friends > div {
+  margin-right: 20px;
+  width: calc(var(--profile-size) - 10px);
+  height: calc(var(--profile-size) - 10px);
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  font-size: 1.3vw;
+  transition: 0.2s ease all;
+}
+.header__add_friends:hover > div {
+  background: var(--primary);
+  color: white;
+}
+
+.header__add_friends > div > span {
+  transform: translateY(-3px);
+}
+.header__add_friends > div > span {
+  transform: translateY(-3px);
 }
 
 /* 

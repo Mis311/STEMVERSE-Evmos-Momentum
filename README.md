@@ -147,3 +147,17 @@ typechain@^8.1.0
 @ethersproject/abi@^5.4.7
 @ethersproject/providers@^5.4.7
 -->
+
+## Screen Sizing
+
+- Created on 1366 x 768 Resolution
+
+**Tested | Testing**
+
+Tested on:
+
+- 1366 x 768
+
+Testing on:
+
+- 1920 x 1080

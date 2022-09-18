@@ -20,6 +20,7 @@ function UserCard(props) {
           className="header__user_cancel"
           onClick={() => {
             // Removes user from database
+            // should hide user first while performing query
           }}
         ></div>
       )}
@@ -152,6 +153,20 @@ export default function Header(props) {
                       className="header__user"
                     />
                   </div>
+                </div>
+
+                {/* Add Friends */}
+                <div
+                  class="header__add_friends row hr-center"
+                  onClick={() => {
+                    console.log("Add friends div");
+                  }}
+                >
+                  {/* margin-top: 20px; */}
+                  <div class="row hr-center vr-center">
+                    <span>+</span>
+                  </div>
+                  <p>Add Friends</p>
                 </div>
               </div>
             </div>
