@@ -15,6 +15,7 @@ import Marketplace from "./pages/support/marketplace";
 import Profile from "./pages/profile/profile";
 import Settings from "./pages/profile/settings";
 import GhostNFTSlot from "./pages/support/ghostnft-slot";
+import Error404 from "./pages/404";
 
 import {
   isWallectConnected,
@@ -31,7 +32,7 @@ export default function App(props) {
   // States
   const [connectedAccount] = useGlobalState("connectedAccount");
   const [navigation, setNavigation] = useState({
-    sidebar: true,
+    sidebar: false,
     account: false,
   });
 
@@ -90,7 +91,7 @@ export default function App(props) {
           />
 
           {/* Error Rendering */}
-          {/* <Route path="/404" element={<Error404 />} /> */}
+          <Route path="/404" element={<Error404 />} />
         </Routes>
 
         <Footer />

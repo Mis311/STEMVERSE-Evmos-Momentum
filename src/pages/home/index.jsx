@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Button from "../../components/button/button";
 import Layout from "../../components/layouts/single-sided";
 import { useRef } from "react";
@@ -56,7 +55,7 @@ function Home_Index() {
 
 function Home_About() {
   return (
-    <div className="home__section_2 min-screen-height">
+    <div className="home__section_2 min-screen-height" id="about">
       <Title center={true} content="About" />
 
       {/* Container */}
@@ -164,7 +163,7 @@ function OnStoryCard(props) {
 
 function Home_Story() {
   return (
-    <div className="home__section_3 min-screen-height">
+    <div className="home__section_3 min-screen-height" id="story">
       <Title content="Story" />
       <div>
         <div>
@@ -211,7 +210,7 @@ function CardContianer(props) {
 
 function Home_Game_And_Features() {
   return (
-    <div className="home__section_4 min-screen-height">
+    <div className="home__section_4 min-screen-height" id="games-and-features">
       <Title center={true} content="Games And Features" />
       <div className="column">
         {/* Containers */}

@@ -15,6 +15,7 @@
 
 -- @Pages
 ---- @Home
+---- @Error
 */
 
 /* 
@@ -31,7 +32,7 @@
 
   /* Primary */
   --primary: #3d9edf;
-  --secondary: #ed6468;
+  --secondary: #ff4131;
   --primary-light: #c3c4ef;
   --secondary-light: #ffb8bb;
   --primary-linear-gradient: linear-gradient(270deg, #6e29fb, #9e43f0);
@@ -466,6 +467,19 @@ div.active .header__back_button {
 .btn:hover {
   clip-path: polygon(0 0%, 0 150%, 200% 95.6%, 101.4% 0, 190% 0%);
 }
+
+.btn-2 {
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+.btn-2:hover {
+  background: var(--primary);
+}
 /* 
 ==========
 ---- @Card
@@ -655,9 +669,7 @@ div.signedin .single_sided_spacing {
 }
 
 /* Section 5 (Newsletter) */
-/* 
-
-*/
+/* */
 .newsletter__background {
   background: linear-gradient(rgba(3, 31, 49, 0.7), rgba(3, 31, 49, 0.7)),
     url("https://www.artistichaven.com/wp-content/uploads/2020/10/Easy-Acrylic-Painting-Ideas-for-Beginners-on-Canvas-32.jpg");
@@ -683,19 +695,78 @@ div.signedin .single_sided_spacing {
   z-index: 10;
   padding: 30px;
 }
+
+/* 
+===========
+---- @Error
+===========
+*/
+.error {
+  margin: 0 25vw;
+  text-align: center;
+  transform: translateY(-5vw);
+}
+
+.error__abstract-box_1 {
+  background: var(--secondary);
+  height: 35px;
+  width: 100px;
+  position: absolute;
+  left: 7vw;
+  top: 12vw;
+}
+.error__abstract-box_1:after {
+  content: "";
+  background: var(--secondary);
+  opacity: 0.7;
+  left: 45px;
+  top: 15px;
+  height: inherit;
+  width: inherit;
+  z-index: -1;
+  position: absolute;
+}
+.error__abstract-box_2 {
+  top: 23.7vw;
+  right: 7.3vw;
+  background: rgb(255 65 49 / 70%);
+  height: 35px;
+  width: 100px;
+  position: absolute;
+}
+
+.error__abstract-box_2:before {
+  content: "";
+  background: var(--secondary);
+  left: 45px;
+  top: 15px;
+  height: inherit;
+  width: inherit;
+  z-index: -1;
+  position: absolute;
+}
+
+.error > div > h1 {
+  font-size: 15vw;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.error > p {
+  width: 70%;
+  line-height: 2;
+}
+.error .btn-2 {
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+  background: transparent;
+}
+.error .btn-2:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
 /* polygon(15% 0%, -35% 100.3%, 98% 95.6%, 101.4% 0, 190% 0%) */
 /* polygon(0 0%, 0 150%, 200% 95.6%, 101.4% 0, 190% 0%) */
 /* polygon(25% 0%, 10% 100%, 85% 100%, 96% 0%, 0% 0%) */
 /* polygon(15% 0%, -35% 110.3%, 808% -54.4%, 151.4% 0%, 0% 0%)*/
-/* 
-@keyframes hello {
-  0% {
-    right: -100px;
-    display: none;
-  }
-  100% {
-    right: 0;
-    display: block;
-  }
-}
- */
