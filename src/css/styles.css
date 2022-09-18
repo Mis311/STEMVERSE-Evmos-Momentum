@@ -214,123 +214,74 @@ div > .header__navigation_hover > div {
 .header__user {
   transition: 0.5s ease all;
   cursor: pointer;
+  z-index: 1;
 }
 .header__user:hover {
   background: rgb(0 60 100);
   border-radius: 3px;
-  padding-left: 20px;
+  padding-left: 45px;
+}
+.header__user:after {
+  content: "";
+  background: red;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 40px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: 0.5s ease all;
+}
+.header__user:hover:after {
+  opacity: 1;
 }
 
 /* Spacing */
 .header__loggedin_user > div:nth-child(2),
 .header__user > div:nth-child(2) {
-  margin: 10px 20px;
+  margin: 10px 15px;
 }
 
+/* Social */
+.header__navigation_hover.priority-4 > div > h3 {
+  letter-spacing: 3px;
+}
+
+/* Active | Offline | Pending Headings */
+.header__navigation_hover.priority-4 > div > div > h4 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+/* Logged in User */
+.header__profile {
+  width: var(--profile-size);
+  background: var(--primary);
+  height: var(--profile-size);
+  border-radius: 50%;
+}
+.header__loggedin_user > div.online > span:nth-child(2) {
+  font-size: 14px;
+  color: #00f900;
+  margin-top: 5px;
+}
+.header__loggedin_user > div:nth-child(2) > span:first-child {
+  font-weight: 500;
+}
+
+/* User's Friends */
+.header__user > .header__profile {
+  z-index: var(--priority-4);
+  width: calc(var(--profile-size) - 10px);
+  height: calc(var(--profile-size) - 10px);
+}
 .header__user > div:nth-child(2) > span:first-child {
   font-weight: 500;
   margin-bottom: 5px;
 }
 .header__user > div:nth-child(2) > span:last-child {
   color: rgb(207, 207, 207);
-}
-
-div.active
-  > .header__navigation_hover
-  > div:first-child
-  > div:nth-child(2)
-  > span:first-child {
-  font-weight: 600;
-}
-
-/* Profile insides */
-header > div.active > div.header__navigation_hover.priority-4 > div > h3 {
-  letter-spacing: 3px;
-}
-
-header > div.active > div.header__navigation_hover.priority-4 > div > div > h4 {
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 400;
-}
-
-/* Friends Profiles (hover) */
-header
-  > div.active
-  > div.header__navigation_hover.priority-4
-  > div
-  > div
-  > div
-  > div
-  > .header__profile {
-  width: calc(var(--profile-size) - 10px);
-  height: calc(var(--profile-size) - 10px);
-}
-
-/*  */
-
-div
-  > .header__navigation_hover
-  > div:first-child
-  > div:nth-child(2).online
-  > span:last-child,
-div
-  > .header__navigation_hover
-  > div:last-child
-  > div
-  > div:nth-child(2).online
-  > span:last-child {
-  font-size: 14px;
-  color: #00f900;
-  margin-top: 5px;
-}
-div
-  > div.header__navigation_hover.priority-4
-  > div.header__user-friends
-  > div
-  > div
-  > span:nth-child(2) {
-  font-size: 14px;
-  color: #00f900;
-  margin-top: 5px;
-}
-div
-  > div.header__navigation_hover.priority-4
-  > div.header__user-friends
-  > div
-  > div
-  > span:nth-child(1) {
-  font-weight: 700;
-}
-
-/* Replicant Profile
-.header__user-new-profile {
-  position: absolute;
-  transform: translate(-25px, -53px);
-  top: -100px;
-  right: 0;
-  transition: 0.5s ease all;
-  z-index: 4;
-}
-.header__user-friends.false {
-  opacity: 0;
-  right: 20px;
-}
-
-div.active > div.header__user-new-profile {
-  top: 100px;
-  opacity: 1;
-}
-
-.header__user-new-profile > div:nth-child(2) {
-  margin: 0 15px;
-} */
-
-.header__profile {
-  width: var(--profile-size);
-  background: var(--primary);
-  height: var(--profile-size);
-  border-radius: 50%;
 }
 
 /* Back Button Navigation */
