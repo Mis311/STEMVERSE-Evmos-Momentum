@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Button from "../button/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function UserCard(props) {
   return (
@@ -49,6 +49,21 @@ function AddFriends() {
 }
 export default function Header(props) {
   const [addFriends, setAddFriends] = useState(false);
+  const { pathname, hash, key } = useLocation();
+  useEffect(() => {
+    // else scroll to id
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          // creates a smooth scroll to element
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0);
+    }
+  }, [pathname, hash, key]);
+
   return (
     <>
       {/* Header */}
@@ -70,15 +85,15 @@ export default function Header(props) {
               En
             </a>
             <ul className="no-bullets row space-evenly hr-center no-padding">
-              <a href="#about">
+              <Link to="/#about">
                 <li>About</li>
-              </a>
-              <a href="#story">
+              </Link>
+              <Link to="/#story">
                 <li>Story</li>
-              </a>
-              <a href="#games-and-features">
+              </Link>
+              <Link to="/#games-and-features">
                 <li>Game & Features</li>
-              </a>
+              </Link>
               <Link to="/ghost-nft-shell">
                 <li>Ghost NFT Slot</li>
               </Link>
@@ -170,13 +185,13 @@ export default function Header(props) {
 
                   {/* Add Friends */}
                   <div
-                    class="header__add_friends row hr-center"
+                    className="header__add_friends row hr-center"
                     onClick={() => {
                       setAddFriends(true);
                     }}
                   >
                     {/* margin-top: 20px; */}
-                    <div class="row hr-center vr-center">
+                    <div className="row hr-center vr-center">
                       <span>+</span>
                     </div>
                     <p>Add Friends</p>

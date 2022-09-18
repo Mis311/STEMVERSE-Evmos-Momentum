@@ -754,7 +754,8 @@ div.signedin .single_sided_spacing {
 }
 
 .error > p {
-  width: 70%;
+  font-size: 1.17vw;
+  width: 110%;
   line-height: 2;
 }
 .error .btn-2 {
