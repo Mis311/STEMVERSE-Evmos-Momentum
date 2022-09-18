@@ -219,24 +219,25 @@ div > .header__navigation_hover > div {
 .header__user:hover {
   background: rgb(0 60 100);
   border-radius: 3px;
-  padding-left: 45px;
+  padding-left: 55px;
 }
 
 .header__user_copy {
-  background: red;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
   width: 30px;
   position: absolute;
   height: 30px;
   border-radius: 2px;
   opacity: 0;
-  transition: 0.5s ease all;
+  transition: 0.2s ease all;
   left: 40px;
 }
 .header__user:hover .header__user_copy {
   opacity: 1;
 }
 .header__user_copy:hover {
-  background: blue;
+  background: var(--primary);
 }
 
 /* Spacing */

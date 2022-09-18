@@ -4,12 +4,26 @@ import Button from "../button/button";
 function UserCard(props) {
   return (
     <div className={"row hr-center " + props.className}>
-      {!props.copy && <div className="header__user_copy"></div>}
+      {/* Copy Button */}
+      {!props.copy && (
+        <div
+          className="header__user_copy"
+          onClick={() => {
+            // copy user props.data
+          }}
+        ></div>
+      )}
+
+      {/* User Image */}
       <div className="header__profile"></div>
+      
+      {/* User Info */}
       <div className={"column space-evenly " + props.status}>
         <span>{props.name || "Ley Hanamura"}</span>
         <span>{props.data || "Online"}</span>
       </div>
+      
+      {/* If user is logged in */}
       {props.user && <div className="hr-center vr-center flex">▽</div>}
     </div>
   );
