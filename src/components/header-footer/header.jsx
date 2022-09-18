@@ -4,6 +4,7 @@ import Button from "../button/button";
 function UserCard(props) {
   return (
     <div className={"row hr-center " + props.className}>
+      {!props.copy && <div className="header__user_copy"></div>}
       <div className="header__profile"></div>
       <div className={"column space-evenly " + props.status}>
         <span>{props.name || "Ley Hanamura"}</span>
@@ -63,6 +64,7 @@ export default function Header(props) {
                   user={true}
                   status="online"
                   className="header__loggedin_user"
+                  copy={true}
                 />
                 <h3 className="uppercase">Social</h3>
                 {/* Pending */}

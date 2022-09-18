@@ -221,24 +221,27 @@ div > .header__navigation_hover > div {
   border-radius: 3px;
   padding-left: 45px;
 }
-.header__user:after {
-  content: "";
+
+.header__user_copy {
   background: red;
   width: 30px;
-  height: 30px;
   position: absolute;
-  left: 40px;
+  height: 30px;
   border-radius: 2px;
   opacity: 0;
   transition: 0.5s ease all;
+  left: 40px;
 }
-.header__user:hover:after {
+.header__user:hover .header__user_copy {
   opacity: 1;
+}
+.header__user_copy:hover {
+  background: blue;
 }
 
 /* Spacing */
 .header__loggedin_user > div:nth-child(2),
-.header__user > div:nth-child(2) {
+.header__user > div:nth-child(3) {
   margin: 10px 15px;
 }
 
