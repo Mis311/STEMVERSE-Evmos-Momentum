@@ -10,6 +10,7 @@ import React, { useEffect, useState } from "react";
 
 //
 import Home from "./pages/home/index";
+import Menu from "./pages/home/menu";
 import HelpCenter from "./pages/support/help-center";
 import Marketplace from "./pages/support/marketplace";
 import Profile from "./pages/profile/profile";
@@ -53,6 +54,7 @@ export default function App(props) {
   return (
     <BrowserRouter>
       <div className={props.user && "signedin"}>
+        <Menu />
         <Header
           {...props}
           connectWallet={connectWallet}

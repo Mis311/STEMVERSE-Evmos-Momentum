@@ -107,7 +107,7 @@ export default function Header(props) {
         </div>
 
         {/* Connected User + Friends */}
-        <div className={props.navigation.sidebar && "active"}>
+        <div className={"" + (props.navigation.sidebar && "active")}>
           {props.user ? (
             <>
               {/* Backgrounds */}
@@ -201,7 +201,7 @@ export default function Header(props) {
                 </div>
               </div>
               <div
-                className={"header__navigation_hover2"}
+                className="header__navigation_hover2"
                 onClick={() => {
                   props.setNavigation(false);
                 }}
@@ -209,7 +209,7 @@ export default function Header(props) {
 
               {/* Header Profile */}
               <div
-                className={"header__user-profile"}
+                className="header__user-profile"
                 onClick={() => {
                   props.setNavigation(true);
                 }}

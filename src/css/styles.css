@@ -89,6 +89,30 @@ a {
   letter-spacing: 0.6vw;
 }
 
+/* Menu */
+.menu {
+  z-index: var(--priority-1);
+  color: #fff;
+  font-size: 14px;
+  background-color: #3d9edf;
+  border-radius: 5px;
+  padding: 20px;
+  min-width: 150px;
+  margin: 0;
+  position: absolute;
+  list-style: none;
+  transition: 0.5s ease all;
+}
+.menu li {
+  padding: 10px 0;
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: 0.5s ease all;
+}
+.menu li:hover {
+  padding-left: 20px;
+  background: rgb(29 113 169 / 68%);
+}
 /* 
 =============
 -- @ScrollBar
