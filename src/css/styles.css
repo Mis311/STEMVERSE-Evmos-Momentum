@@ -64,6 +64,14 @@
   --profile-size: 53px;
   --social-icons-size: 30px;
   --navigation-width: 25vw;
+  --minimal-radius: 5px;
+
+  /* Scroll bar radius */
+  --scroll-bar-radius: 10px;
+
+  /* Preview Card */
+  --card-preview: rgba(0, 82, 137, 0.71);
+  --card-preview-radius: 20px;
 }
 
 body {
@@ -79,7 +87,9 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
+p {
+  color: #c7c7c7;
+}
 .title {
   font-family: var(--font-family-2);
   font-weight: 700;
@@ -95,7 +105,7 @@ a {
   color: #fff;
   font-size: 14px;
   background-color: #3d9edf;
-  border-radius: 5px;
+  border-radius: var(--minimal-radius);
   padding: 20px;
   min-width: 150px;
   margin: 0;
@@ -105,7 +115,7 @@ a {
 }
 .menu li {
   padding: 10px 0;
-  border-radius: 5px;
+  border-radius: var(--minimal-radius);
   margin: 5px 0;
   transition: 0.5s ease all;
 }
@@ -134,7 +144,7 @@ a {
   background-color: #3d9edf;
   border: 5px solid transparent;
   background-clip: content-box;
-  border-radius: 10px;
+  border-radius: var(--scroll-bar-radius);
 }
 
 /* Handle on hover */
@@ -142,7 +152,7 @@ a {
   background-color: #0088e2;
   border: 5px solid transparent;
   background-clip: content-box;
-  border-radius: 10px;
+  border-radius: var(--scroll-bar-radius);
 }
 
 /* 
@@ -286,7 +296,7 @@ div > .header__navigation_hover > div {
 
 .header__user_copy {
   border: 2px solid var(--primary);
-  border-radius: 5px;
+  border-radius: var(--minimal-radius);
   width: 30px;
   position: absolute;
   height: 30px;
@@ -304,7 +314,7 @@ div > .header__navigation_hover > div {
 
 .header__user_cancel {
   border: 2px solid var(--secondary);
-  border-radius: 5px;
+  border-radius: var(--minimal-radius);
   width: 30px;
   position: absolute;
   height: 30px;
@@ -498,12 +508,13 @@ div.active .header__back_button {
   background: transparent;
   color: var(--primary);
   border: 2px solid var(--primary);
-  border-radius: 5px;
+  border-radius: var(--minimal-radius);
   cursor: pointer;
   transition: 0.5s ease all;
 }
 .btn-2:hover {
   background: var(--primary);
+  color: #fff;
 }
 /* 
 ==========
@@ -728,18 +739,19 @@ div.signedin .single_sided_spacing {
 */
 
 /* Headings */
-.profile__h1,
-.profile__h2 {
+.light_heading {
   font-size: 1.2vw;
   text-transform: uppercase;
   font-weight: 200;
+  margin-top: 90px;
+  margin-bottom: 45px;
   letter-spacing: 0.5vw;
 }
 
 /* Profile */
 .profile__user_image {
-  width: 10vw;
-  height: 10vw;
+  width: 12vw;
+  height: 12vw;
   background: lightgrey;
   border-radius: 50%;
   margin-right: 3vw;
@@ -747,26 +759,34 @@ div.signedin .single_sided_spacing {
 
 /* Profile Container */
 .profile__user_container > h2 {
+  font-weight: 700;
+  text-transform: capitalize;
   letter-spacing: 3px;
+  font-size: 2.5vw;
+  margin: 1vw 0;
 }
 .profile {
-  margin: 0 40px;
+  margin: 0 50px;
 }
-.profile__user_container > div > .user-tag {
-  font-weight: 600;
-  letter-spacing: 2px;
+.profile__user_container > div.row.hr-center {
+  margin-bottom: 0.5vw;
 }
 .profile__user_container > div > .profile__user-tag-fol:nth-child(2) {
   margin-left: 20px;
 }
+.profile__user-tag {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
 .profile__user-tag-fol {
   font-size: 1vw;
-  font-weight: 100;
+  font-weight: 200;
   margin: 0 10px;
   letter-spacing: 0.2vw;
 }
 .profile__user_desc {
-  width: 60%;
+  width: 70%;
   line-height: 1.5;
   font-weight: 300;
 }
@@ -780,9 +800,6 @@ div.signedin .single_sided_spacing {
   width: 30%;
   margin-right: 2vw;
 }
-.profile__achievements > div:last-child {
-  width: 50%;
-}
 
 /* Study Tracks */
 .profile__study_tracks > div {
@@ -793,31 +810,58 @@ div.signedin .single_sided_spacing {
 }
 
 /* Completed Tracks */
-.card {
-  width: 20vw;
+
+.profile__card {
+  width: 28.5%;
   height: 20vw;
   background: rgb(0 82 137 / 71%);
   padding: 10px;
-  margin: 10px;
+  margin: 1vw 2vw 2vw 0;
   border-radius: 10px;
 }
-.card > div {
+.profile__card > div {
   margin: 10px 30px;
 }
 
 /* Project */
+.profile__project_container {
+  width: 60%;
+}
+
+.profile__project_container p {
+  line-height: 2.5vw;
+}
+
 .project__project {
-  border-radius: 5px;
+  border-radius: var(--minimal-radius);
   border: 2px solid var(--primary);
   margin: 20px 0;
   padding: 25px 50px;
 }
 
-.profile__project__container {
-}
 .project-card__image {
-  width: 40vw;
-  height: initial;
+  width: 20vw;
+  height: 40vh;
+  background: var(--card-preview);
+  border-radius: var(--card-preview-radius);
+}
+
+.project__project h3 {
+  letter-spacing: 0.2vw;
+  font-weight: 500;
+}
+.profile__stacks_icons > span {
+  margin-right: 1.5vw;
+}
+
+/* 
+=================
+---- @Marketplace
+=================
+*/
+.marketplace__section_1 {
+  width: 50%;
+  height: 400px;
   background: red;
 }
 /* 

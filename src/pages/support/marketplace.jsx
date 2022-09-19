@@ -1,20 +1,22 @@
+import Layout from "../../components/layouts/single-sided";
+
 function NFTCard() {
   return <div className="nft-card"></div>;
 }
 
 export default function Marketplace() {
   return (
-    <div>
+    <Layout>
       <h1 className="hidden">Marketplace</h1>
       {/* Top two images */}
-      <div>
+      <div className="marketplace__section_1">
         <div></div>
         <div></div>
       </div>
 
       {/* Trending */}
       <div className="marketplace__trending">
-        <h2>Trending</h2>
+        <h2 className="light_heading">Trending</h2>
         <h3>#Fight With Plasma</h3>
         <div>
           <div className="card"></div>
@@ -26,7 +28,7 @@ export default function Marketplace() {
 
       {/* Categories */}
       <div className="marketplace__categories">
-        <h2>Categories</h2>
+        <h2 className="light_heading">Categories</h2>
         <h3>#Chilling With the Breeze</h3>
         <div className="row">
           <div className="row">
@@ -42,7 +44,7 @@ export default function Marketplace() {
 
       {/* Updates */}
       <div className="marketplace__updates">
-        <h2>Updates</h2>
+        <h2 className="light_heading">Updates</h2>
         <h3>#Just Dropped</h3>
         <div className="row wrap hr-center">
           <NFTCard />
@@ -57,7 +59,7 @@ export default function Marketplace() {
 
       {/* NFTs */}
       <div className="marketplace__nfts">
-        <h2>NFTs</h2>
+        <h2 className="light_heading">NFTs</h2>
         <h3>#Take Hold of Your Collections</h3>
         <div className="row wrap hr-center">
           <NFTCard />
@@ -71,7 +73,7 @@ export default function Marketplace() {
 
       {/* Backgrounds */}
       <div className="marketplace__backgrounds">
-        <h2>Backgrounds</h2>
+        <h2 className="light_heading">Backgrounds</h2>
         <h3>#Get Your Own Cool Background</h3>
         <div className="row wrap hr-center">
           <NFTCard />
@@ -82,6 +84,6 @@ export default function Marketplace() {
           <NFTCard />
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }

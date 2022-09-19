@@ -6,7 +6,7 @@ function StudyTrack(props) {
 
 function Card(props) {
   return (
-    <div className="card">
+    <div className="profile__card">
       <div className="card-header row hr-center space-between">
         <p>{props.name || "Equipments"}</p>
         <span>→</span>
@@ -17,7 +17,7 @@ function Card(props) {
 
 function ProjectCards(props) {
   return (
-    <div className="project__project row">
+    <div className="project__project row space-between">
       {/* Info */}
       <div className="profile__project_container">
         {/* Name & Info */}
@@ -31,9 +31,9 @@ function ProjectCards(props) {
         </div>
 
         {/* Stacks */}
-        <div>
+        <div className="profile__stacks">
           <h3>Stacks</h3>
-          <div>
+          <div className="profile__stacks_icons">
             <span>React</span>
             <span>Ploygon</span>
             <span>Express</span>
@@ -51,17 +51,24 @@ export default function Profile(props) {
     <Layout>
       <div className="profile">
         {/* User Profile */}
-        <h1 className="profile__h1">Profile</h1>
+        <h1 className="light_heading">Profile</h1>
 
         {/* User Info */}
-        <div className="profile__user-profile row">
-          <div className="profile__user_image"></div>
+        <div className="profile__user-profile row hr-center">
+          {/* User Image */}
+          <div className="profile__user_image_container">
+            <div className="profile__user_image"></div>
+          </div>
+
+          {/* User Info */}
           <div className="profile__user_container">
             {/* Name */}
-            <h2 className="profile__h2">{props.name || "Ley Hanamura"}</h2>
+            <h2 className="light_heading profile__username">
+              {props.name || "Ley Hanamura"}
+            </h2>
 
             {/* Info */}
-            <div className="row">
+            <div className="row hr-center">
               <span className="profile__user-tag">
                 {props.title || "UI Designer"}
               </span>
@@ -75,24 +82,26 @@ export default function Profile(props) {
 
             {/* Description */}
             <div className="profile__user_desc">
-              {props.description ||
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."}
+              <p>
+                {props.description ||
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."}
+              </p>
             </div>
           </div>
         </div>
 
         {/* Achievements and Description */}
         <div>
-          <h2 className="profile__h2">Achievements | Collections</h2>
+          <h2 className="light_heading">Achievements | Collections</h2>
           <div className="profile__achievements row">
             <div></div>
-            <div></div>
+            <div className="full-width"></div>
           </div>
         </div>
 
         {/* Study Tracks */}
         <div>
-          <h2 className="profile__h2">Study Tracks</h2>
+          <h2 className="light_heading">Study Tracks</h2>
           <div className="profile__study_tracks">
             <StudyTrack />
             <StudyTrack />
@@ -102,7 +111,7 @@ export default function Profile(props) {
 
         {/* Completion & Awards */}
         <div>
-          <h2 className="profile__h2">Completed Tracks</h2>
+          <h2 className="light_heading">Completed Tracks</h2>
           <div className="profile__completion flex-wrap row">
             <Card />
             <Card />
@@ -118,7 +127,7 @@ export default function Profile(props) {
 
         {/* Projects */}
         <div>
-          <h2 className="profile__h2">Projects</h2>
+          <h2 className="light_heading">Projects</h2>
           <div className="profile__projects">
             <ProjectCards />
             <ProjectCards />

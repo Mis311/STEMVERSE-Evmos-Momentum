@@ -19,7 +19,7 @@ const getEtheriumContract = () => {
 
 const isWallectConnected = async () => {
   try {
-    if (!ethereum) return alert("Please install Metamask");
+    if (!ethereum) console.log("Please install Metamask");
     const accounts = await ethereum.request({ method: "eth_accounts" });
 
     if (accounts.length) {
@@ -47,7 +47,7 @@ const checkIfTransactionExist = async () => {
 
 const connectWallet = async () => {
   try {
-    if (!ethereum) return alert("Please install Metamask");
+    if (!ethereum) console.log("Please install Metamask");
     const accounts = await ethereum.request({ method: "eth_requestAccounts" });
     setGlobalState("connectedAccount", accounts[0]);
   } catch (error) {
@@ -58,7 +58,7 @@ const connectWallet = async () => {
 
 const sendMoney = async ({ connectedAccount, address, amount, remark }) => {
   try {
-    if (!ethereum) return alert("Please install Metamask");
+    if (!ethereum) console.log("Please install Metamask");
     const transactionContract = getEtheriumContract();
     const parsedAmount = ethers.utils.parseEther(amount);
 
@@ -95,7 +95,7 @@ const sendMoney = async ({ connectedAccount, address, amount, remark }) => {
 
 const getAllTransactions = async () => {
   try {
-    if (!ethereum) return alert("Please install Metamask");
+    if (!ethereum) console.log("Please install Metamask");
     const transactionContract = getEtheriumContract();
     const availableTransactions =
       await transactionContract.getAllTransactions();
