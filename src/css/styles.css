@@ -606,6 +606,7 @@ div.signedin .single_sided_spacing {
 }
 .home__section_1 > div {
   padding-top: 10vw;
+  cursor: pointer;
 }
 
 .home__title {
@@ -823,6 +824,7 @@ div.signedin .single_sided_spacing {
   padding: 10px;
   margin: 1vw 2vw 2vw 0;
   border-radius: 10px;
+  cursor: pointer;
 }
 .preview__card > div {
   margin: 10px 30px;
@@ -899,6 +901,7 @@ div.signedin .single_sided_spacing {
   height: 300px;
   background: var(--card-preview);
   border-radius: var(--card-preview-radius);
+  cursor: pointer;
 }
 
 .nft-card {
@@ -906,8 +909,19 @@ div.signedin .single_sided_spacing {
   border-radius: var(--minimal-radius);
   margin-right: 2%;
   margin-bottom: 2%;
-  padding: 50px 30px;
+  padding: 50px 25px;
+  margin-top: 75px;
 }
+
+.nft__image {
+  background: var(--primary);
+  width: inherit;
+  height: 250px;
+  border-radius: var(--minimal-radius);
+  margin-bottom: -50px;
+  transform: translateY(-80px);
+}
+
 .nft__user_profile {
   background: var(--primary);
   width: 40px;
@@ -924,6 +938,16 @@ div.signedin .single_sided_spacing {
 
 .nft__profle > div:nth-child(2) {
   margin-left: 15px;
+}
+.nft__price {
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+.nft__price span:first-child {
+  font-size: 2.5vw;
+  font-weight: 700;
+  color: var(--primary);
+  margin-right: 10px;
 }
 
 /* 

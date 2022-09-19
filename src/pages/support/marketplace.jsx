@@ -23,9 +23,9 @@ function NFTCard() {
       </div>
 
       {/* Price */}
-      <div>
+      <div className="nft__price">
         <h4 className="uppercase">Current Bid</h4>
-        <div className="row space-between">
+        <div className="row space-between hr-center">
           <span>0.4ETH</span>
           <span>752.98 USD</span>
         </div>
@@ -83,7 +83,7 @@ export default function Marketplace() {
         <div className="marketplace__updates">
           <h2 className="light_heading">Updates</h2>
           <h3>#Just Dropped</h3>
-          <div className="row flex-wrap hr-center">
+          <div className="row flex-wrap hr-center space-between">
             <NFTCard />
             <NFTCard />
             <NFTCard />
@@ -91,7 +91,9 @@ export default function Marketplace() {
             <NFTCard />
             <NFTCard />
           </div>
-          <button>View More</button>
+          <div className="row vr-center">
+            <button>View More</button>
+          </div>
         </div>
 
         {/* NFTs */}
