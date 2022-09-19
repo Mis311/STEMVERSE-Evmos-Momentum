@@ -27,7 +27,7 @@
 }
 
 .full-width {
-  width: -webkit-fill-available;
+  width: -webkit-fill-available !important;
 }
 .screen-height {
   height: 100vh;

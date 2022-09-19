@@ -1,18 +1,8 @@
 import Layout from "../../components/layouts/single-sided";
+import PreviewCard from "../../components/cards/preview-card";
 
 function StudyTrack(props) {
   return <div className=""></div>;
-}
-
-function Card(props) {
-  return (
-    <div className="profile__card">
-      <div className="card-header row hr-center space-between">
-        <p>{props.name || "Equipments"}</p>
-        <span>→</span>
-      </div>
-    </div>
-  );
 }
 
 function ProjectCards(props) {
@@ -113,12 +103,12 @@ export default function Profile(props) {
         <div>
           <h2 className="light_heading">Completed Tracks</h2>
           <div className="profile__completion flex-wrap row">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <PreviewCard className="profile__card" />
+            <PreviewCard className="profile__card" />
+            <PreviewCard className="profile__card" />
+            <PreviewCard className="profile__card" />
+            <PreviewCard className="profile__card" />
+            <PreviewCard className="profile__card" />
           </div>
           <div className="row full-width vr-center hr-center">
             <button className="btn-2">View More</button>
