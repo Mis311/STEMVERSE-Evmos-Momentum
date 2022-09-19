@@ -1,5 +1,7 @@
+import Layout from "../../components/layouts/single-sided";
+
 function StudyTrack(props) {
-  return <div>Study Track</div>;
+  return <div className=""></div>;
 }
 
 function Card(props) {
@@ -15,9 +17,9 @@ function Card(props) {
 
 function ProjectCards(props) {
   return (
-    <div className="project-card row">
+    <div className="project__project row">
       {/* Info */}
-      <div>
+      <div className="profile__project_container">
         {/* Name & Info */}
         <div>
           <h3>{props.name || "About Firemate"}</h3>
@@ -46,77 +48,83 @@ function ProjectCards(props) {
 
 export default function Profile(props) {
   return (
-    <div>
-      {/* User Profile */}
-      <h1>Profile</h1>
+    <Layout>
+      <div className="profile">
+        {/* User Profile */}
+        <h1 className="profile__h1">Profile</h1>
 
-      {/* User Info */}
-      <div className="profile__user-profile">
-        <div className="user-profile-img"></div>
-        <div className="user-profile-container">
-          {/* Name */}
-          <h2>{props.name || "Ley Hanamura"}</h2>
+        {/* User Info */}
+        <div className="profile__user-profile row">
+          <div className="profile__user_image"></div>
+          <div className="profile__user_container">
+            {/* Name */}
+            <h2 className="profile__h2">{props.name || "Ley Hanamura"}</h2>
 
-          {/* Info */}
-          <div className="row">
-            <span className="user-tag">{props.title || "UI Designer"}</span>
-            <span className="user-tag-fol">
-              Following • {props.following || "11"}
-            </span>
-            <span className="user-tag-fol">
-              Followers • {props.followers || "132k"}
-            </span>
+            {/* Info */}
+            <div className="row">
+              <span className="profile__user-tag">
+                {props.title || "UI Designer"}
+              </span>
+              <span className="profile__user-tag-fol">
+                Following • {props.following || "11"}
+              </span>
+              <span className="profile__user-tag-fol">
+                Followers • {props.followers || "132k"}
+              </span>
+            </div>
+
+            {/* Description */}
+            <div className="profile__user_desc">
+              {props.description ||
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."}
+            </div>
           </div>
+        </div>
 
-          {/* Description */}
-          <div>
-            {props.description ||
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."}
+        {/* Achievements and Description */}
+        <div>
+          <h2 className="profile__h2">Achievements | Collections</h2>
+          <div className="profile__achievements row">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        {/* Study Tracks */}
+        <div>
+          <h2 className="profile__h2">Study Tracks</h2>
+          <div className="profile__study_tracks">
+            <StudyTrack />
+            <StudyTrack />
+            <StudyTrack />
+          </div>
+        </div>
+
+        {/* Completion & Awards */}
+        <div>
+          <h2 className="profile__h2">Completed Tracks</h2>
+          <div className="profile__completion flex-wrap row">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+          <div className="row full-width vr-center hr-center">
+            <button className="btn-2">View More</button>
+          </div>
+        </div>
+
+        {/* Projects */}
+        <div>
+          <h2 className="profile__h2">Projects</h2>
+          <div className="profile__projects">
+            <ProjectCards />
+            <ProjectCards />
           </div>
         </div>
       </div>
-
-      {/* Achievements and Description */}
-      <div>
-        <h2>Achievements | Collections</h2>
-        <div className="profile__achievements">
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-
-      {/* Study Tracks */}
-      <div>
-        <h2>Study Tracks</h2>
-        <div className="profile__study_tracks">
-          <StudyTrack />
-          <StudyTrack />
-          <StudyTrack />
-        </div>
-      </div>
-
-      {/* Completion & Awards */}
-      <div>
-        <h2>Completed Tracks</h2>
-        <div className="profile__completion wrap row">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
-        <button className="btn-2">View More</button>
-      </div>
-
-      {/* Projects */}
-      <div>
-        <h2>Projects</h2>
-        <div className="profile__projects">
-          <ProjectCards />
-          <ProjectCards />
-        </div>
-      </div>
-    </div>
+    </Layout>
   );
 }

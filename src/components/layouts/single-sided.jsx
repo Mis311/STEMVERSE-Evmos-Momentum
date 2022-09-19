@@ -2,7 +2,7 @@ import SocialIcons from "../social-icons";
 export default function Layout(props) {
   if (props.user) {
     return (
-      <div className="row">
+      <div className={"row " + props.className}>
         {/* Social Icons */}
         <div
           className={"sidebar " + (props.navigation.sidebar && "priority--1")}
@@ -23,7 +23,7 @@ export default function Layout(props) {
     );
   }
   return (
-    <div className="row">
+    <div className={"row " + props.className}>
       <div className="sidebar">
         <SocialIcons className="column" />
       </div>
@@ -31,8 +31,4 @@ export default function Layout(props) {
       <div className="single_sided_spacing full-width">{props.children}</div>
     </div>
   );
-}
-
-export function Logged_Layout(props) {
-  return;
 }

@@ -113,6 +113,7 @@ a {
   padding-left: 20px;
   background: rgb(29 113 169 / 68%);
 }
+
 /* 
 =============
 -- @ScrollBar
@@ -720,6 +721,105 @@ div.signedin .single_sided_spacing {
   padding: 30px;
 }
 
+/* 
+=============
+---- @Profile
+=============
+*/
+
+/* Headings */
+.profile__h1,
+.profile__h2 {
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 0.5vw;
+}
+
+/* Profile */
+.profile__user_image {
+  width: 10vw;
+  height: 10vw;
+  background: lightgrey;
+  border-radius: 50%;
+  margin-right: 3vw;
+}
+
+/* Profile Container */
+.profile__user_container > h2 {
+  letter-spacing: 3px;
+}
+.profile {
+  margin: 0 40px;
+}
+.profile__user_container > div > .user-tag {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.profile__user_container > div > .profile__user-tag-fol:nth-child(2) {
+  margin-left: 20px;
+}
+.profile__user-tag-fol {
+  font-size: 1vw;
+  font-weight: 100;
+  margin: 0 10px;
+  letter-spacing: 0.2vw;
+}
+.profile__user_desc {
+  width: 60%;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* Achievements */
+.profile__achievements > div {
+  border: 2px solid var(--primary);
+  height: 25vw;
+}
+.profile__achievements > div:first-child {
+  width: 30%;
+  margin-right: 2vw;
+}
+.profile__achievements > div:last-child {
+  width: 50%;
+}
+
+/* Study Tracks */
+.profile__study_tracks > div {
+  width: -webkit-fill-available;
+  height: 6vw;
+  border: 2px solid var(--primary);
+  margin: 20px 0;
+}
+
+/* Completed Tracks */
+.card {
+  width: 20vw;
+  height: 20vw;
+  background: rgb(0 82 137 / 71%);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.card > div {
+  margin: 10px 30px;
+}
+
+/* Project */
+.project__project {
+  border-radius: 5px;
+  border: 2px solid var(--primary);
+  margin: 20px 0;
+  padding: 25px 50px;
+}
+
+.profile__project__container {
+}
+.project-card__image {
+  width: 40vw;
+  height: initial;
+  background: red;
+}
 /* 
 ===========
 ---- @Error
