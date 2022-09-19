@@ -50,6 +50,8 @@ function AddFriends() {
 export default function Header(props) {
   const [addFriends, setAddFriends] = useState(false);
   const { pathname, hash, key } = useLocation();
+
+  // Moving page to path efffect
   useEffect(() => {
     // else scroll to id
     if (hash) {
