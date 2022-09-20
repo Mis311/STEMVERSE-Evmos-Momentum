@@ -94,11 +94,11 @@ function UserCard(props) {
           </p>
 
           <p>
-            <Link to="/profile">Settings</Link>
+            <Link to="/settings">Settings</Link>
           </p>
 
           <p>
-            <Link> to="/profile"Subscriptions</Link>
+            <Link to="/settings#subscriptions">Subscriptions</Link>
           </p>
 
           <p>

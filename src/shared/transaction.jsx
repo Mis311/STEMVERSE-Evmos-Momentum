@@ -3,10 +3,10 @@ import { setGlobalState } from "../store";
 
 import { contractAbi, contractAddress } from "../utils/constants";
 
-const { ethereum } = window;
+// const { ethereum } = window;
 
 const getEtheriumContract = () => {
-  const provider = new ethers.providers.Web3Provider(ethereum);
+  const provider = new ethers.providers.Web3Provider(web3.currentProvider);
   const signer = provider.getSigner();
   const transactionContract = new ethers.Contract(
     contractAddress,
@@ -19,17 +19,15 @@ const getEtheriumContract = () => {
 
 const isWallectConnected = async () => {
   try {
-    if (!ethereum) console.log("Please install Metamask");
-    const accounts = await ethereum.request({ method: "eth_accounts" });
-
-    if (accounts.length) {
+    const accounts = await window.ethereum.request({
+      method: "eth_requestAccounts",
+    });
+    if (accounts.length > 0) {
+      console.log("Wallet connected");
       setGlobalState("connectedAccount", accounts[0]);
-    } else {
-      console.log("No accounts found.");
     }
   } catch (error) {
-    console.log(error);
-    throw new Error("No ethereum object.");
+    return false;
   }
 };
 
