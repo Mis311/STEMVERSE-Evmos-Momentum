@@ -89,10 +89,22 @@ function UserCard(props) {
       {/* Children items If user is logged in */}
       {props.user && (
         <div className="header__user_items">
-          <p>Profile</p>
-          <p>Settings</p>
-          <p>Subscriptions</p>
-          <p>Log Out</p>
+          <p>
+            <Link to="/profile">Profile</Link>
+          </p>
+
+          <p>
+            <Link to="/profile">Settings</Link>
+          </p>
+
+          <p>
+            <Link> to="/profile"Subscriptions</Link>
+          </p>
+
+          <p>
+            {/* on click, disconnect ehterim wallter */}
+            <Link>Log Out</Link>
+          </p>
         </div>
       )}
     </div>

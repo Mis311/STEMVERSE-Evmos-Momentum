@@ -975,6 +975,11 @@ div.signedin .single_sided_spacing {
   width: 40%;
 }
 
+/* Categories */
+.marketplace__categories > div > div > div.preview__card > div > p {
+  letter-spacing: 2px;
+}
+
 /* Cards */
 .marketplace .card {
   width: 32%;

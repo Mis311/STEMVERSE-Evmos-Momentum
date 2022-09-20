@@ -1,7 +1,12 @@
 import SocialIcons from "../social-icons.jsx";
 export default function Footer(props) {
   return (
-    <footer className="row space-evenly">
+    <footer
+      className="row space-evenly priority-4 sticky"
+      style={{
+        position: "sticky",
+      }}
+    >
       {/* Section-1 */}
       <div className="footer__section_1">
         {/* Logo */}

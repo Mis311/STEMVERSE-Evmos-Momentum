@@ -69,12 +69,12 @@ export default function Marketplace() {
           <h3>#Chilling With the Breeze</h3>
           <div className="column">
             <div className="row">
-              <PreviewCard />
-              <PreviewCard className="full-width" />
+              <PreviewCard name="Ghost NFT" />
+              <PreviewCard name="Profile Backgrounds" className="full-width" />
             </div>
             <div className="row">
-              <PreviewCard className="full-width" />
-              <PreviewCard />
+              <PreviewCard name="Banners" className="full-width" />
+              <PreviewCard name="Equipments" />
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function Marketplace() {
             <NFTCard />
           </div>
           <div className="row vr-center">
-            <button>View More</button>
+            <button className="btn-2">View More</button>
           </div>
         </div>
 
