@@ -59,7 +59,13 @@ function UserCard(props) {
       )}
 
       {/* User Image */}
-      <div className="header__profile"></div>
+      <div
+        className="header__profile"
+        style={{
+          background: `url(${props.imageURL})` || "assets/users/ley.png",
+          backgroundSize: "cover",
+        }}
+      ></div>
 
       {/* User Info */}
       <div className={"column space-evenly " + props.status}>
@@ -80,6 +86,11 @@ function AddFriends() {
   );
 }
 export default function Header(props) {
+  const [users, setUsers] = useState({
+    online: 0,
+    offline: 0,
+    pending: 0,
+  });
   const [addFriends, setAddFriends] = useState(false);
   const { pathname, hash, key } = useLocation();
 
@@ -97,6 +108,8 @@ export default function Header(props) {
       }, 0);
     }
   }, [pathname, hash, key]);
+
+  console.log(props);
 
   return (
     <>
@@ -151,69 +164,70 @@ export default function Header(props) {
                     status="online"
                     className="header__loggedin_user"
                     copy={true}
+                    {...props.user}
                   />
                   <h3 className="uppercase">Social</h3>
-
-                  {/* Pending */}
                   <div>
-                    <h4 className="uppercase">Pending • 3</h4>
+                    <h4 className="uppercase">
+                      Pending {/* • {users.pending} */}
+                    </h4>
                     <div>
-                      <UserCard
-                        data="0x0190fqw12r12 ... e591"
-                        className="header__user"
-                        copy={true}
-                        cancel={true}
-                      />
-                      <UserCard
-                        data="0x0190fqw12r12 ... e591"
-                        className="header__user"
-                        copy={true}
-                        cancel={true}
-                      />
-                      <UserCard
-                        data="0x0190fqw12r12 ... e591"
-                        className="header__user"
-                        copy={true}
-                        cancel={true}
-                      />
+                      {props.friends.map(
+                        (friend, index) =>
+                          friend.status == "pending" && (
+                            <UserCard
+                              key={index}
+                              data="0x0190fqw12r12 ... e591"
+                              className="header__user"
+                              copy={true}
+                              cancel={true}
+                              name={friend.name}
+                              imageURL={friend.imageURL}
+                            />
+                          )
+                      )}
                     </div>
                   </div>
 
                   {/* Online */}
                   <div>
-                    <h4 className="uppercase">Online • 3</h4>
+                    <h4 className="uppercase">
+                      Online {/* • {users.pending} */}
+                    </h4>
                     <div>
-                      <UserCard
-                        data="0x0190fqw12r12 ... e591"
-                        className="header__user"
-                      />
-                      <UserCard
-                        data="0x0190fqw12r12 ... e591"
-                        className="header__user"
-                      />
-                      <UserCard
-                        data="0x0190fqw12r12 ... e591"
-                        className="header__user"
-                      />
+                      {props.friends.map(
+                        (friend, index) =>
+                          friend.status == "online" && (
+                            <UserCard
+                              key={index}
+                              data="0x0190fqw12r12 ... e591"
+                              className="header__user"
+                              name={friend.name}
+                              imageURL={friend.imageURL}
+                            />
+                          )
+                      )}
                     </div>
                   </div>
 
                   {/* Offline */}
                   <div>
-                    <h4 className="uppercase">Offline • 3</h4>
+                    <h4 className="uppercase">
+                      Online {/* • {users.pending} */}
+                    </h4>
                     <div>
-                      <UserCard
-                        data="0x0190fqw12r12 ... e591"
-                        className="header__user"
-                      />
-                      <UserCard
-                        data="0x0190fqw12r12 ... e591"
-                        className="header__user"
-                      />
-                      <UserCard
-                        data="0x0190fqw12r12 ... e591"
-                        className="header__user"
-                      />
+                      {props.friends.map(
+                        (friend, index) =>
+                          friend.status == "offline" && (
+                            <UserCard
+                              key={index}
+                              data="0x0190fqw12r12 ... e591"
+                              className="header__user"
+                              name={friend.name}
+                              imageURL={friend.imageURL}
+                            />
+                          )
+                      )}
                     </div>
                   </div>
 
@@ -245,6 +259,10 @@ export default function Header(props) {
                 onClick={() => {
                   props.setNavigation(true);
                 }}
+                style={{
+                  background: `url(${props.user.imageURL})`,
+                  backgroundSize: "cover",
+                }}
               ></div>
 
               {/* Friends */}
@@ -254,10 +272,19 @@ export default function Header(props) {
                   props.setNavigation(true);
                 }}
               >
-                <div className="header__user-profile"></div>
-                <div className="header__user-profile"></div>
-                <div className="header__user-profile"></div>
-                <div className="header__user-profile"></div>
+                {props.friends.map(
+                  (friend, index) =>
+                    friend.status === "online" && (
+                      <div
+                        className="header__user-profile"
+                        key={index}
+                        style={{
+                          background: `url(${friend.imageURL})`,
+                          backgroundSize: "cover",
+                        }}
+                      />
+                    )
+                )}
               </div>
 
               {/* Back button */}

@@ -47,33 +47,39 @@ export default function Profile(props) {
         <div className="profile__user-profile row hr-center">
           {/* User Image */}
           <div className="profile__user_image_container">
-            <div className="profile__user_image"></div>
+            <div
+              className="profile__user_image"
+              style={{
+                background:
+                  `url(${props.user.imageURL})` || "assets/users/ley.png",
+                backgroundSize: "cover",
+              }}
+            ></div>
           </div>
 
           {/* User Info */}
           <div className="profile__user_container">
             {/* Name */}
             <h2 className="light_heading profile__username">
-              {props.name || "Ley Hanamura"}
+              {props.user.name || "Ley Hanamura"}
             </h2>
 
             {/* Info */}
             <div className="row hr-center">
               <span className="profile__user-tag">
-                {props.title || "UI Designer"}
+                {props.user.title || "UI Designer"}
               </span>
               <span className="profile__user-tag-fol">
-                Following • {props.following || "11"}
+                Following • {props.user.following || "11"}
               </span>
               <span className="profile__user-tag-fol">
-                Followers • {props.followers || "132k"}
+                Followers • {props.user.followers || "132k"}
               </span>
             </div>
-
             {/* Description */}
             <div className="profile__user_desc">
               <p>
-                {props.description ||
+                {props.user.description ||
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."}
               </p>
             </div>
