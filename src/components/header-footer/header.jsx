@@ -4,19 +4,25 @@ import { useState, useEffect } from "react";
 
 // Icons
 import { GoX } from "react-icons/go";
-import { BsClipboard, BsClipboardCheck } from "react-icons/bs";
+import { BsClipboard, BsClipboardCheck, BsChevronDown } from "react-icons/bs";
 
 function UserCard(props) {
   const [profileVisibility, setProfileVisibility] = useState(true);
   const [copyData, setCopyData] = useState(false);
+  const [userNavigaton, setUserNavigaton] = useState(false);
   return (
     <div
       className={
         "row hr-center " +
         props.className +
         " " +
-        (!profileVisibility && " hidden")
+        (!profileVisibility && " hidden") +
+        " " +
+        (userNavigaton && " active")
       }
+      onClick={() => {
+        props.user && setUserNavigaton(!userNavigaton);
+      }}
     >
       {/* Copy Button */}
       {!props.copy && (
@@ -74,7 +80,21 @@ function UserCard(props) {
       </div>
 
       {/* If user is logged in */}
-      {props.user && <div className="hr-center vr-center flex">▽</div>}
+      {props.user && (
+        <div className="hr-center vr-center flex header__user_logged_in_chevron">
+          <BsChevronDown height="2em" />
+        </div>
+      )}
+
+      {/* Children items If user is logged in */}
+      {props.user && (
+        <div className="header__user_items">
+          <p>Profile</p>
+          <p>Settings</p>
+          <p>Subscriptions</p>
+          <p>Log Out</p>
+        </div>
+      )}
     </div>
   );
 }
@@ -86,11 +106,11 @@ function AddFriends() {
   );
 }
 export default function Header(props) {
-  const [users, setUsers] = useState({
-    online: 0,
-    offline: 0,
-    pending: 0,
-  });
+  // const [users, setUsers] = useState({
+  //   online: 0,
+  //   offline: 0,
+  //   pending: 0,
+  // });
   const [addFriends, setAddFriends] = useState(false);
   const { pathname, hash, key } = useLocation();
 

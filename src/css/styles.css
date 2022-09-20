@@ -379,6 +379,62 @@ div > .header__navigation_hover > div {
   height: var(--profile-size);
   border-radius: 50%;
 }
+
+.header__loggedin_user {
+  border-radius: 5px;
+  width: 80%;
+  transition: 0.5s ease all;
+  cursor: pointer;
+}
+.header__loggedin_user:hover {
+  background: rgba(3, 20, 30, 0.7);
+  padding: 10px 20px;
+}
+.header__loggedin_user.active {
+  background: rgb(3, 20, 30);
+  padding: 10px 20px;
+}
+
+.header__user_items {
+  position: absolute;
+  transform: translate(30px, 130px);
+  background: rgb(3, 20, 30);
+  opacity: 0;
+  z-index: -1;
+  width: 60%;
+  transition: 0.5s ease all;
+}
+
+.header__loggedin_user.active .header__user_items {
+  opacity: 1;
+  z-index: var(--priority-3);
+}
+
+.header__user_items > p {
+  padding: 10px 20px;
+  margin: 0;
+  margin-left: 20px;
+  border-radius: 10px;
+  transition: 0.5s ease all;
+  width: 40%;
+  z-index: var(--priority-3);
+}
+
+.header__user_items > p:hover {
+  background: #076eaa9c;
+  padding: 10px 40px;
+  margin-left: 40px;
+}
+.header__user_items > p:first-child {
+  margin-top: 20px;
+}
+.header__user_items > p:last-child {
+  margin-bottom: 20px;
+}
+.header__user_logged_in_chevron {
+  margin-left: auto;
+  margin-right: 1vw;
+}
 .header__loggedin_user > div.online > span:nth-child(2) {
   font-size: 14px;
   color: #00f900;
