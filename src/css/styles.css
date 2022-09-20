@@ -611,12 +611,6 @@ div.active .header__back_button {
   width: 30vw;
 }
 
-.card__style_1 {
-  border: 1px solid blue;
-  height: 15vw;
-  width: 20vw;
-}
-
 /* 
 ============
 ---- @Footer
@@ -680,7 +674,7 @@ div.signedin .single_sided_spacing {
       rgb(2, 35, 57, 0.82),
       rgba(4, 26, 40, 0.82)
     ),
-    url(/assets/backgrounds/home.svg);
+    url(/assets/backgrounds/home.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -704,7 +698,7 @@ div.signedin .single_sided_spacing {
 }
 
 .home__title > p {
-  width: 25vw;
+  width: 35vw;
   line-height: 2.3;
   letter-spacing: 1.7px;
   padding-top: 1vw;
@@ -788,8 +782,45 @@ div.signedin .single_sided_spacing {
 }
 
 /* Section 3 (Story) */
+
 .hs3_card_container > div > div {
   margin: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card__style_1 {
+  border: 2px solid var(--primary);
+  height: 15vw;
+  width: 20vw;
+}
+.card__style_2 > p {
+  line-height: 2;
+}
+.card__style_2 > img {
+  border-radius: 10px;
+}
+.card__style_1 > div.active {
+  position: fixed;
+  background: rgba(5, 5, 5, 0.8);
+  height: 100vh;
+  width: 100vw;
+  z-index: 20;
+  left: 0;
+  top: 0;
+}
+#story > div > div > p {
+  line-height: 2;
+}
+
+.story__card_active {
+  border: 3px solid var(--primary);
+  padding: 20px;
+  height: 60vh;
+  padding-right: 40px;
+  width: 50vw;
+  overflow: hidden;
+  overflow-y: visible;
 }
 
 /* Section 5 (Newsletter) */
