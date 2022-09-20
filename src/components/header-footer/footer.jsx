@@ -14,8 +14,7 @@ export default function Footer(props) {
 
         {/* Text */}
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut.{" "}
+         Bringing STEM to the future.<br /> Teaching and supporting potential Tech contributers on Web3. {" "}
         </p>
 
         {/* Social Icons */}
