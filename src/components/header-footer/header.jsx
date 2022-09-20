@@ -185,7 +185,7 @@ export default function Header(props) {
         </div>
 
         {/* Connected User + Friends */}
-        <div className={"" + (props.navigation.sidebar && "active")}>
+        <div className={"priority-3 " + (props.navigation.sidebar && "active")}>
           {props.account ? (
             <>
               {/* Backgrounds */}
@@ -332,8 +332,9 @@ export default function Header(props) {
             </>
           ) : (
             <Button
-              className="px-5-radius priority-4"
+              className="px-5-radius priority-3"
               content="Connect Wallet"
+              style={{}}
               onClick={() => {
                 console.log(props.account);
               }}
