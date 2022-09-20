@@ -148,7 +148,8 @@ export default function Header(props) {
       {/* Header */}
       <header
         className={
-          "row hr-center vr-center space-between " + (props.user && "signedin")
+          "row hr-center vr-center space-between " +
+          (props.account && "signedin")
         }
       >
         {/* Navigation Items */}
@@ -185,7 +186,7 @@ export default function Header(props) {
 
         {/* Connected User + Friends */}
         <div className={"" + (props.navigation.sidebar && "active")}>
-          {props.user ? (
+          {props.account ? (
             <>
               {/* Backgrounds */}
               <div className="header__navigation_hover priority-4">
@@ -331,10 +332,9 @@ export default function Header(props) {
             </>
           ) : (
             <Button
-              className="px-5-radius"
+              className="px-5-radius priority-4"
               content="Connect Wallet"
               onClick={() => {
-                props.connectWallet();
                 console.log(props.account);
               }}
             />

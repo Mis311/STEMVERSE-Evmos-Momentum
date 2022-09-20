@@ -1141,3 +1141,7 @@ div.signedin .single_sided_spacing {
 /* polygon(0 0%, 0 150%, 200% 95.6%, 101.4% 0, 190% 0%) */
 /* polygon(25% 0%, 10% 100%, 85% 100%, 96% 0%, 0% 0%) */
 /* polygon(15% 0%, -35% 110.3%, 808% -54.4%, 151.4% 0%, 0% 0%)*/
+
+#root > div > footer > div.footer__section_1 > p {
+  line-height: 3;
+}

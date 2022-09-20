@@ -102,7 +102,13 @@ function Home_About() {
 
 function Card(props) {
   return (
-    <div className={"card__style_1 " + props.className}>
+    <div
+      className={"card__style_1 " + props.className}
+      style={{
+        background: `url('${props.image}')`,
+        backgroundSize: "cover",
+      }}
+    >
       <div className="card__image"></div>
     </div>
   );
@@ -263,7 +269,7 @@ function CardContianer(props) {
   return (
     <div className="row space-between card-container">
       {/* Text & Description */}
-      <div className={"column " + props.position1 || ""}>
+      <div className={"column " + (props.position1 || "")}>
         <h2>{props.name || "Learn as You Earn"}</h2>
         <p>
           {props.description ||
@@ -272,10 +278,37 @@ function CardContianer(props) {
       </div>
 
       {/* Image */}
-      <Card className={props.position2 || ""} />
+      <Card className={props.position2 || ""} image={props.image} />
     </div>
   );
 }
+
+let features = [
+  {
+    name: "Social",
+    description:
+      "Easily add your friends and friends wallet on your dashboard. Check out their Ghost NFTs, mentor each other, and explore STEMVERSE world together.",
+    image: "assets/nft/2.webp",
+  },
+  {
+    name: "Ghost NFT Slot",
+    description:
+      "Earn tokens by daily login bonus, and completing small tasks such as coding or mentorship to get rare Ghost NFTs. You can either sell it on our marketplace, or keep it if it is your favorite character!",
+    image: "assets/nft/1.webp",
+  },
+  {
+    name: "Sponsorship Project",
+    description:
+      "We will conduct projects to raise STEM talent pools, where a great mentorship and skillup course, and you are entitled to apply for it as long as you have certain amount of NFTs/tokens!",
+    image: "assets/nft/3.webp",
+  },
+  {
+    name: "STEMVERSE Land",
+    description:
+      "Where you will rebuild as new STEM empire. 3D games (TBH) and land purchase is available.",
+    image: "assets/nft/2.webp",
+  },
+];
 
 function Home_Game_And_Features() {
   return (
@@ -283,10 +316,35 @@ function Home_Game_And_Features() {
       <Title center={true} content="Games And Features" />
       <div className="column">
         {/* Containers */}
-        <CardContianer position1="order-1" position2="order-2" />
-        <CardContianer position1="order-2" position2="order-1" />
-        <CardContianer position1="order-1" position2="order-2" />
-        <CardContianer position1="order-2" position2="order-1" />
+        <CardContianer
+          position1="order-1"
+          position2="order-2"
+          name={features[0].name}
+          description={features[0].description}
+          image={features[0].image}
+        />
+        <CardContianer
+          position1="order-2"
+          position2="order-1"
+          name={features[1].name}
+          description={features[1].description}
+          image
+          src={features[1].image}
+        />
+        <CardContianer
+          position1="order-1"
+          position2="order-2"
+          name={features[2].name}
+          description={features[2].description}
+          image={features[2].image}
+        />
+        <CardContianer
+          position1="order-2"
+          position2="order-1"
+          name={features[3].name}
+          description={features[3].description}
+          image={features[3].image}
+        />
       </div>
     </div>
   );

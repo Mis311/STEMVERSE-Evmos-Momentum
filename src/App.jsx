@@ -53,7 +53,7 @@ export default function App(props) {
 
   return (
     <BrowserRouter>
-      <div className={props.user && "signedin"}>
+      <div className={" " + (connectedAccount ? "signedin" : "")}>
         <Menu />
         <Header
           {...props}
