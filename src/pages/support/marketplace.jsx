@@ -33,8 +33,8 @@ function NFTCard() {
 
       {/* Buttons */}
       <div className="row hr-center space-between">
-        <button>View NFT</button>
-        <button>Purchase</button>
+        <button className="btn-2">View NFT</button>
+        <button className="btn-2">Purchase</button>
       </div>
     </div>
   );

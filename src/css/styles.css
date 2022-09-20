@@ -308,6 +308,7 @@ div > .header__navigation_hover > div {
 .header__user:hover .header__user_copy {
   opacity: 1;
 }
+
 .header__user_copy:hover {
   background: var(--primary);
 }
@@ -328,6 +329,29 @@ div > .header__navigation_hover > div {
 }
 .header__user_cancel:hover {
   background: var(--secondary);
+}
+.header__icon_cancel,
+.header__user_copy_icon,
+.header__user_copy_succesful_icon {
+  height: 2em;
+  transition: 0.3s ease all;
+}
+
+.header__icon_cancel {
+  color: var(--secondary);
+}
+.header__user_copy_icon {
+  color: var(--primary);
+}
+.header__user_cancel:hover .header__icon_cancel,
+.header__user_copy:hover .header__user_copy_icon,
+.header__user_copy:hover .header__user_copy_succesful_icon {
+  color: #fff;
+}
+
+.header__user_copy.active {
+  border: 2px solid #0deb0d;
+  background: #0deb0d;
 }
 
 /* Spacing */

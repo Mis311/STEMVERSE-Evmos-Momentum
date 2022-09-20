@@ -2,28 +2,60 @@ import { Link, useLocation } from "react-router-dom";
 import Button from "../button/button";
 import { useState, useEffect } from "react";
 
+// Icons
+import { GoX } from "react-icons/go";
+import { BsClipboard, BsClipboardCheck } from "react-icons/bs";
+
 function UserCard(props) {
+  const [profileVisibility, setProfileVisibility] = useState(true);
+  const [copyData, setCopyData] = useState(false);
   return (
-    <div className={"row hr-center " + props.className}>
+    <div
+      className={
+        "row hr-center " +
+        props.className +
+        " " +
+        (!profileVisibility && " hidden")
+      }
+    >
       {/* Copy Button */}
       {!props.copy && (
         <div
-          className="header__user_copy"
+          className={
+            "row hr-center vr-center header__user_copy " +
+            (copyData && " active")
+          }
           onClick={() => {
             // copy user props.data
+            navigator.clipboard.writeText(props.data);
+            setCopyData(true);
           }}
-        ></div>
+          onMouseLeave={() => {
+            setCopyData(false);
+          }}
+        >
+          <BsClipboard
+            className={"header__user_copy_icon " + (copyData && " hidden")}
+          />
+          <BsClipboardCheck
+            className={
+              "header__user_copy_succesful_icon " + (!copyData && " hidden")
+            }
+          />
+        </div>
       )}
 
       {/* Cancel Button */}
       {props.cancel && (
         <div
-          className="header__user_cancel"
+          className="header__user_cancel row hr-center vr-center"
           onClick={() => {
-            // Removes user from database
-            // should hide user first while performing query
+            setProfileVisibility(false);
+            // removes from local storage
           }}
-        ></div>
+        >
+          <GoX className="header__icon_cancel" />
+        </div>
       )}
 
       {/* User Image */}
