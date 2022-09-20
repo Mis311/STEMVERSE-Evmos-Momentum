@@ -22,7 +22,7 @@ import {
   isWallectConnected,
   checkIfTransactionExist,
   connectWallet,
-} from "./shared/Transaction";
+} from "./shared/transaction";
 import { useGlobalState } from "./store";
 
 //
