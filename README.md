@@ -1,6 +1,6 @@
 # Stemverse
 
-Stemverse is a project of @Mis311 and @AcmeGamers for [Evmos Hackathon](https://devpost.com/software/stemverse). The purpose of the project was to create a decenteralized area for the STEM learners. Centralized education is not up-to-date to this web3 age, where anyone can be learners and mentors and complete learning online. With STEM subject, however, the connection is more complex to build, which is where we build the STEMVERSE, where those learners & workers can connect through a SF world and work on individual / collective projects together. 
+Stemverse is a project of [@Mis311](https://github.com/Mis311/) and [@AcmeGamers](https://github.com/AcmeGamers/) for [Evmos Hackathon](https://devpost.com/software/stemverse). The purpose of the project was to create a decenteralized area for the STEM learners. Centralized education is not up-to-date to this web3 age, where anyone can be learners and mentors and complete learning online. With STEM subject, however, the connection is more complex to build, which is where we build the STEMVERSE, where those learners & workers can connect through a SF world and work on individual / collective projects together. 
 
 ## Getting Started
 
@@ -61,9 +61,16 @@ yarn
 
 ## Configuration
 
-### Ganache Lookup
+Since most of the configurations are already done, you might want to open a testnet for yourself. To do that, open a new terminal in the root directory **STEMVERSE-Evmos-Momentum**, and perform the following commands:
+
+```bash
+cd smart_contracts
+npx hardhat node
+```
 
 ### Metamask Configuration
+
+
 
 ### Running Development Server
 
