@@ -1,6 +1,8 @@
+![stemverse](public/assets/stemverse.png)
+
 # Stemverse
 
-Stemverse is a project of [@Mis311](https://github.com/Mis311/) and [@AcmeGamers](https://github.com/AcmeGamers/) for [Evmos Hackathon](https://devpost.com/software/stemverse). The purpose of the project was to create a decenteralized area for the STEM learners. Centralized education is not up-to-date to this web3 age, where anyone can be learners and mentors and complete learning online. With STEM subject, however, the connection is more complex to build, which is where we build the STEMVERSE, where those learners & workers can connect through a SF world and work on individual / collective projects together. 
+Stemverse is a project of [@Mis311](https://github.com/Mis311/) and [@AcmeGamers](https://github.com/AcmeGamers/) for [Evmos Hackathon](https://devpost.com/software/stemverse). The purpose of the project was to create a decenteralized area for the STEM learners. 
 
 ## Getting Started
 
@@ -70,7 +72,7 @@ npx hardhat node
 
 ### Metamask Configuration
 
-
+T
 
 ### Running Development Server
 
