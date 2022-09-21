@@ -63,7 +63,11 @@ yarn
 
 ## Configuration
 
-Since most of the configurations are already done, you might want to open a testnet for yourself. To do that, open a new terminal in the root directory **STEMVERSE-Evmos-Momentum**, and perform the following commands:
+Since most of the configurations are already done, you might want to open a testnet for yourself. 
+
+### Hardhat Configuraiton
+
+To do that, open a new terminal in the root directory **STEMVERSE-Evmos-Momentum**, and perform the following commands:
 
 ```bash
 cd smart_contracts
@@ -72,7 +76,11 @@ npx hardhat node
 
 ### Metamask Configuration
 
-T
+Metamask configuration is just you importing accounts for testing purposes for minting and other solidity based functions. From the previous command `npx hardhat node`, you would have got around 20 accounts with their addresses and private keys. Follow the next steps:
+
+- Open **MetaMask** > Login > Click on User Image
+- Select **Import Account**
+- Enter the private key of any account from hardhat configurations
 
 ### Running Development Server
 
