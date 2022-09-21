@@ -65,6 +65,20 @@ yarn
 
 Since most of the configurations are already done, you might want to open a testnet for yourself. 
 
+### MetaMask Testnet
+
+The first step is to create a testnet on metamask. The process is quite simple:
+
+- Open **MetaMask** > Login > Click on User Image
+- Settings > Networks > **Add Network**
+
+#### Network Information
+- **Network Name:** ETH Testnet
+- **New RPC URL:** HTTP://127.0.0.1:7545
+- **Chain ID:** 1337
+- **Currency Symbol:** ETH
+
+
 ### Hardhat Configuraiton
 
 To do that, open a new terminal in the root directory **STEMVERSE-Evmos-Momentum**, and perform the following commands:
@@ -80,7 +94,7 @@ Metamask configuration is just you importing accounts for testing purposes for m
 
 - Open **MetaMask** > Login > Click on User Image
 - Select **Import Account**
-- Enter the private key of any account from hardhat configurations
+- Enter the private key of any account from hardhat configuration step
 
 ### Running Development Server
 
